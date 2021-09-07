@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.homepage-bg-image {
+  background: url("assets/image/home_banner.png") no-repeat center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
