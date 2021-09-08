@@ -7,13 +7,15 @@ import CategorySectionOne from "./components/Home/CategorySectionOne";
 import CategorySectionTwo from "./components/Home/CategorySectionTwo";
 import CategorySectionForYou from "./components/Home/CategorySectionForYou";
 import Profile from "./components/Profile/Profile";
+import SignUp from "./components/SingUp/SingUp";
+import SignIn from "./components/SingIn/SingIn";
 
 function App() {
   return (
       <div>
         <Header/>
-        <Profile/>
-          <Footer/>
+        <SignIn/>
+
       </div>
   );
 }
