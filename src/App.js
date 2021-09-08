@@ -6,15 +6,13 @@ import Banner from "./components/Home/Banner";
 import CategorySectionOne from "./components/Home/CategorySectionOne";
 import CategorySectionTwo from "./components/Home/CategorySectionTwo";
 import CategorySectionForYou from "./components/Home/CategorySectionForYou";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
       <div>
         <Header/>
-        <Banner/>
-          <CategorySectionOne/>
-          <CategorySectionTwo/>
-          <CategorySectionForYou/>
+        <Profile/>
           <Footer/>
       </div>
   );
