@@ -9,13 +9,14 @@ import CategorySectionForYou from "./components/Home/CategorySectionForYou";
 import Profile from "./components/Profile/Profile";
 import SignUp from "./components/SingUp/SingUp";
 import SignIn from "./components/SingIn/SingIn";
+import NftCreate from "./components/NftCreate/NftCreate";
 
 function App() {
   return (
       <div>
         <Header/>
-        <SignIn/>
-
+        <NftCreate/>
+        <Footer/>
       </div>
   );
 }

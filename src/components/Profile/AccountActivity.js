@@ -1,6 +1,4 @@
-import {Card, Col, Container, Row, Tab, Table, Tabs} from "react-bootstrap";
-import add_new_nft_card from "../../assets/image/add_new_nft_card.svg";
-
+import {Card, Container, Tab, Table, Tabs} from "react-bootstrap";
 
 const AccountActivity = props => {
     return (

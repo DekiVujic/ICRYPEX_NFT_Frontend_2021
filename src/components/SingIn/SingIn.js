@@ -5,9 +5,9 @@ const SignIn = props => {
     return (
         <Container className="justify-content-center pt-5" style={{height:"100vh"}}>
             <Row className="justify-content-md-center">
-                <Card style={{ width: '35rem', height: '45vh' }} className="text-center">
+                <Card style={{ width: '35rem', height: '450px' }} className="text-center">
                     <Card.Body >
-                        <Container style={{height:"50vh"}}>
+                        <Container>
                             <Row className="justify-content-center">
                                 <Col>
                                     Sign In
