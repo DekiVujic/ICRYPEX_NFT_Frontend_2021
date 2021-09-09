@@ -9,14 +9,15 @@ import CategorySectionForYou from "./components/Home/CategorySectionForYou";
 import Profile from "./components/Profile/Profile";
 import SignUp from "./components/SingUp/SingUp";
 import SignIn from "./components/SingIn/SingIn";
+import Faq from "./components/Faq/Faq";
 import NftCreate from "./components/NftCreate/NftCreate";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 function App() {
   return (
       <div>
         <Header/>
-        <NftCreate/>
-        <Footer/>
+        <AboutUs/>
       </div>
   );
 }

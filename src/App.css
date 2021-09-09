@@ -44,3 +44,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.nft-chip-image {
+  background: url("assets/image/nft_chip.svg") no-repeat center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
