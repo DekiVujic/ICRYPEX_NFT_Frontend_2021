@@ -1,11 +1,13 @@
 import {Col, Container, FormControl, InputGroup, Row} from "react-bootstrap";
+import {useTranslation} from "react-i18next";
 
 const Footer = props => {
+    const { t } = useTranslation(["common"]);
     return (
         <Container className="justify-content-center" style={{height:"40vh"}}>
             <Row className="justify-content-md-center">
                 <Col xs lg="6" className="text-center mb-2">
-                    Auction
+                    {t("common:auction")}
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
@@ -16,59 +18,58 @@ const Footer = props => {
                             aria-label="Email Address"
                             aria-describedby="basic-addon2"
                         />
-                        <InputGroup.Text id="basic-addon2">Subscribe</InputGroup.Text>
+                        <InputGroup.Text id="basic-addon2">{t("common:subscribe")}</InputGroup.Text>
                     </InputGroup>
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    News
+                    {t("common:news")}
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    Map
+                    {t("common:map")}
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    Create
+                    {t("common:create")}
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    Sand
+                    {t("common:send")}
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    Market
+                    {t("common:market")}
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    Pres
+                    {t("common:pres")}
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    Play
+                    {t("common:play")}
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    Terms of Use
+                    {t("common:termsOfUse")}
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    White Paper
+                    {t("common:whitePager")}
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    One Pager
+                    {t("common:onePager")}
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    FAQ
+                    {t("common:faq")}
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    About Us
+                    {t("common:aboutUs")}
                 </Col>
             </Row>
-
         </Container>
     )
 }

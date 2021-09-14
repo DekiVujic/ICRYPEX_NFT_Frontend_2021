@@ -1,11 +1,14 @@
-import {Accordion, Card, Col, Container, Row} from "react-bootstrap";
+import {Card, Col, Container, Row} from "react-bootstrap";
+import {useTranslation} from "react-i18next";
 
 
 const AboutUs = props => {
+
+    const { t } = useTranslation(["common"]);
     return(
-        <Container className="justify-content-center pt-5" style={{height:"70vh"}}>
+        <Container className="justify-content-center pt-5" style={{height:"100vh"}}>
             <Row className="justify-content-md-center">
-                <Card style={{ width: '60rem', height: '62rem' }} className="text-start">
+                <Card style={{ width: '60rem', height: '80rem' }} className="text-start">
                     <Card.Body >
                         <Container>
                             <Row>
@@ -16,7 +19,7 @@ const AboutUs = props => {
                             </Row>
                             <Row >
                                 <Col>
-                                    About Us
+                                    {t("common:aboutUs")}
                                 </Col>
                             </Row>
                             <Row>

@@ -1,5 +1,4 @@
-import {Accordion, Button, Card, Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
-import add_new_nft_card from "../../assets/image/add_new_nft_card.svg";
+import {Accordion, Card, Col, Container, Row} from "react-bootstrap";
 
 const Faq = props => {
     return (

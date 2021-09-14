@@ -1,6 +1,7 @@
 import {Col, Container, Card, Row} from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import cartoon from "../../assets/image/carousel/cartoon.svg";
+import {useTranslation} from "react-i18next";
 
 const responsive = {
     superLargeDesktop: {
@@ -22,12 +23,12 @@ const responsive = {
     }
 };
 const CategorySectionForYou = props => {
-
+    const { t } = useTranslation(["common"]);
     return (
         <Container style={{height:"45vh"}}>
             <Row className="text-center">
                 <Col>
-                    For You
+                    {t("common:forYou")}
                 </Col>
             </Row>
             <Row className="text-center">
