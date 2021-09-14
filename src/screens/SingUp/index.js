@@ -2,11 +2,31 @@ import {Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import {dictSignIn} from "../../routes";
 import {useSelector} from "react-redux";
+import {useForm} from "react-hook-form";
 
 
 const SignUp = () => {
     const { t } = useTranslation(["common","login"]);
     const { lang } = useSelector(state => state.ui);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        clearErrors,
+    } = useForm({
+        mode: "onChange",
+        defaultValues: {
+            email: "",
+        },
+    });
+
+    const onSubmit = data => {
+        clearErrors();
+        console.log("onSubmit")
+        //TODO
+        // call rest api
+    };
+
     return (
         <Container className="justify-content-center pt-5" style={{height:"80rem"}}>
             <Row className="justify-content-md-center">
@@ -52,14 +72,36 @@ const SignUp = () => {
                             </Row>
                             <Row className="justify-content-center text-start">
                                 <Col>
-                                    <Form>
+                                    <Form autoComplete="off"
+                                          noValidate
+                                          onSubmit={handleSubmit(onSubmit)}>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                             <Form.Label>{t("login:firstname")}</Form.Label>
-                                            <Form.Control type="text" placeholder={t("login:firstname")} />
+                                            <Form.Control
+                                                type="text"
+                                                name="firstname"
+                                                placeholder={t("login:firstname")}
+                                                aria-invalid={errors.firstname ? "true" : "false"}
+                                                {...register('firstname', { required: true })}/>
+                                            {errors.firstname && (
+                                                <Form.Text className="text-muted">
+                                                    {t("form:isRequired")}
+                                                </Form.Text>
+                                            )}
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                             <Form.Label>{t("login:surname")}</Form.Label>
-                                            <Form.Control type="text" placeholder={t("login:surname")} />
+                                            <Form.Control
+                                                type="text"
+                                                name="surname"
+                                                placeholder={t("login:surname")}
+                                                aria-invalid={errors.surname ? "true" : "false"}
+                                                {...register('firstname', { required: true })}/>
+                                            {errors.surname && (
+                                                <Form.Text className="text-muted">
+                                                    {t("form:isRequired")}
+                                                </Form.Text>
+                                            )}
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                             <Form.Label>{t("login:displayName")}</Form.Label>

@@ -57,6 +57,14 @@ const init = (initialLang = "tr") => {
               sentNewPassword: "Your new password has been sent via SMS.",
               dontHaveAnAccountYet :'Don’t have an account yet?',
             },
+            form: {
+              isRequired: "This field is required",
+              shouldBeMin: "Should be at least {{value}}",
+              shouldBeMax: "Should be at most {{value}}",
+              shouldBeMinLength: "Should be at least {{value}} characters",
+              shouldBeMaxLength: "Should be at most {{value}} characters",
+              passwordNotMatch: "Passwords do not match",
+            },
 
           },
           menu: {
@@ -114,6 +122,14 @@ const init = (initialLang = "tr") => {
             hasResetPassword: "Parolanız Sıfırlanmıştır.",
             sentNewPassword: "Yeni parolanız SMS olarak gönderilmiştir.",
             dontHaveAnAccountYet :'Henüz bir hesabınız yok mu?',
+          },
+          form: {
+            isRequired: "Bu alanı doldurmalısınız",
+            shouldBeMin: "En az {{value}} olabilir",
+            shouldBeMax: "En çok {{value}} olabilir",
+            shouldBeMinLength: "En az {{value}} hane olmalı",
+            shouldBeMaxLength: "En fazla {{value}} hane olmalı",
+            passwordNotMatch: "Şifreler eşleşmiyor",
           },
           menu: {
             marketplace: 'Marketplace',
