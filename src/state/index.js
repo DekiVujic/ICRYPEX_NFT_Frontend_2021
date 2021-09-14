@@ -11,7 +11,7 @@ import {
     PURGE,
     REGISTER,
 } from "redux-persist";
-import {configureStore, getDefaultMiddleware} from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
 const persistConfig = {
     key: "root",
     storage,

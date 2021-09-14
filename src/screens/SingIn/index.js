@@ -1,7 +1,12 @@
 import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {useTranslation} from "react-i18next";
+import {useSelector} from "react-redux";
+import {dictForgotPassword, dictSignUp} from "../../routes";
 
 
-const SignIn = props => {
+const SignIn = () => {
+    const { t } = useTranslation(["common","login"]);
+    const { lang } = useSelector(state => state.ui);
     return (
         <Container className="justify-content-center pt-5" style={{height:"100vh"}}>
             <Row className="justify-content-md-center">
@@ -10,36 +15,36 @@ const SignIn = props => {
                         <Container>
                             <Row className="justify-content-center">
                                 <Col>
-                                    Sign In
+                                    {t("common:signIn")}
                                 </Col>
                             </Row>
                             <Row className="justify-content-center">
                                 <Col>
                                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                    Don’t have an account yet? <a href={null}>Sign Up</a>
+                                    {t("login:dontHaveAnAccountYet")} <a href={dictSignUp[lang]}>{t("common:signUp")}</a>
                                 </Col>
                             </Row>
                             <Row className="justify-content-center text-start">
                                 <Col>
                                     <Form>
-                                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>User Name</Form.Label>
-                                            <Form.Control type="text" placeholder="User Name" />
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>{t("login:userName")}</Form.Label>
+                                            <Form.Control type="text" placeholder={t("login:userName")} />
                                         </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>Email address</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" />
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>{t("login:email")}</Form.Label>
+                                            <Form.Control type="email" placeholder={t("login:email")} />
                                         </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>{t("login:password")}</Form.Label>
+                                            <Form.Control type="password" placeholder={t("login:password")} />
                                         </Form.Group>
-                                        <Form.Group className="mb-3 text-end" controlId="formBasicPassword">
-                                            <a href={null} > Forgot Password ?</a>
+                                        <Form.Group className="mb-3 text-end">
+                                            <a href={dictForgotPassword[lang]} > {t("login:forgotPassword")}  ?</a>
                                         </Form.Group>
                                         <div className="d-grid gap-2">
                                             <Button variant="primary" type="submit" size="lg">
-                                                Sign In
+                                                {t("common:signIn")}
                                             </Button>
                                         </div>
                                     </Form>

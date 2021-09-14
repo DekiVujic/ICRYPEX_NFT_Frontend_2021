@@ -1,22 +1,27 @@
 import {Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import {useTranslation} from "react-i18next";
+import {dictSignIn} from "../../routes";
+import {useSelector} from "react-redux";
 
 
-const SignUp = props => {
+const SignUp = () => {
+    const { t } = useTranslation(["common","login"]);
+    const { lang } = useSelector(state => state.ui);
     return (
-        <Container className="justify-content-center pt-5" style={{height:"100vh"}}>
+        <Container className="justify-content-center pt-5" style={{height:"80rem"}}>
             <Row className="justify-content-md-center">
-                <Card style={{ width: '35rem', height: '100vh' }} className="text-center">
+                <Card style={{ width: '35rem', height: '65rem' }} className="text-center">
                     <Card.Body >
                         <Container style={{height:"70vh"}}>
                             <Row className="justify-content-center">
                                 <Col>
-                                    Sign Up
+                                    {t("common:signUp")}
                                 </Col>
                             </Row>
                             <Row className="justify-content-center">
                                 <Col>
                                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                    Already have an account? <a href={null}>Sign In</a>
+                                    {t("common:alreadyHaveAnAccount")}? <a href={dictSignIn[lang]}>{t("common:signIn")}</a>
                                 </Col>
                             </Row>
                             <Row className="justify-content-center">
@@ -26,7 +31,7 @@ const SignUp = props => {
                                             <Container style={{height:"70vh"}}>
                                                 <Row className="justify-content-center">
                                                     <Col>
-                                                        One Account Two Platforms
+                                                        {t("common:oneAccountTwoPlatforms")}
                                                     </Col>
                                                 </Row>
                                                 <Row className="justify-content-center">
@@ -37,7 +42,7 @@ const SignUp = props => {
                                                 </Row>
                                                 <Row className="justify-content-center">
                                                     <Col>
-                                                        Sign Up
+                                                        {t("common:signUp")}
                                                     </Col>
                                                 </Row>
                                             </Container>
@@ -49,39 +54,39 @@ const SignUp = props => {
                                 <Col>
                                     <Form>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>Fist Name</Form.Label>
-                                            <Form.Control type="text" placeholder="First Name" />
+                                            <Form.Label>{t("login:firstname")}</Form.Label>
+                                            <Form.Control type="text" placeholder={t("login:firstname")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>Last Name</Form.Label>
-                                            <Form.Control type="text" placeholder="Last Name" />
+                                            <Form.Label>{t("login:surname")}</Form.Label>
+                                            <Form.Control type="text" placeholder={t("login:surname")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>Display Name</Form.Label>
-                                            <Form.Control type="text" placeholder="Display Name" />
+                                            <Form.Label>{t("login:displayName")}</Form.Label>
+                                            <Form.Control type="text" placeholder={t("login:displayName")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>User Name</Form.Label>
-                                            <Form.Control type="text" placeholder="User Name" />
+                                            <Form.Label>{t("login:userName")}</Form.Label>
+                                            <Form.Control type="text" placeholder={t("login:userName")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>Email address</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" />
+                                            <Form.Label>{t("login:email")}</Form.Label>
+                                            <Form.Control type="email" placeholder={t("login:email")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
+                                            <Form.Label>{t("login:password")}</Form.Label>
+                                            <Form.Control type="password" placeholder={t("login:password")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                                            <Form.Label>Confirm Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Confirm Password" />
+                                            <Form.Label>{t("login:confirmPassword")}</Form.Label>
+                                            <Form.Control type="password" placeholder={t("login:confirmPassword")} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                            <Form.Check type="checkbox" label="By clicking Sign Up, I hereby acknowledge that I agree to the ICRYPEX NFT Terms and Conditions and I’ve read the Privacy Notice." />
+                                            <Form.Check type="checkbox" label={t("login:readAndAgreeClick")} />
                                         </Form.Group>
                                         <div className="d-grid gap-2">
                                             <Button variant="primary" type="submit" size="lg">
-                                                Sign Up
+                                                {t("common:signUp")}
                                             </Button>
                                         </div>
                                     </Form>

@@ -1,8 +1,4 @@
-
-import ProfileLeftMenu from "./ProfileLeftMenu";
 import {Col, Container, Row } from "react-bootstrap";
-import MyNfts from "./MyNfts";
-import AccountActivity from "./AccountActivity";
 import Setting from "./Setting";
 import SettingLeftMenu from "./SettingLeftMenu";
 

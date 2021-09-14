@@ -1,24 +1,34 @@
 
 import './App.css';
-import Header from "./screens/Header/Header";
-import Footer from "./screens/Footer/Footer";
-import Banner from "./screens/Home/Banner";
-import CategorySectionOne from "./screens/Home/CategorySectionOne";
-import CategorySectionTwo from "./screens/Home/CategorySectionTwo";
-import CategorySectionForYou from "./screens/Home/CategorySectionForYou";
-import Profile from "./screens/Profile/Profile";
-import SignUp from "./screens/SingUp/SingUp";
-import SignIn from "./screens/SingIn/SingIn";
-import Faq from "./screens/Faq/Faq";
-import NftCreate from "./screens/NftCreate/NftCreate";
-import AboutUs from "./screens/AboutUs/AboutUs";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {pathForgotPassword, pathSignIn, pathSignUp} from "./routes";
+import Header from "./screens/Header";
+import SignUp from "./screens/SingUp";
+import Home from "./screens/Home";
+import SignIn from "./screens/SingIn";
+import ForgotPassword from "./screens/ForgotPassword";
 function App() {
   return (
-      <div>
-        <Header/>
-        <AboutUs/>
-      </div>
+      <Router>
+
+          <Switch>
+              <Route exact path={[...pathSignUp]}>
+                  <Header />
+                  <SignUp />
+              </Route>
+              <Route exact path={[...pathSignIn]}>
+                  <Header />
+                  <SignIn />
+              </Route>
+              <Route exact path={[...pathForgotPassword]}>
+                  <Header />
+                  <ForgotPassword />
+              </Route>
+              <Route path="/">
+                  <Home />
+              </Route>
+          </Switch>
+      </Router>
   );
 }
 
