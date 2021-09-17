@@ -1,8 +1,11 @@
 import {Col, Container, FormControl, InputGroup, Row} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
+import {dictAboutUs, dictFaq, dictSignIn} from "../../routes";
+import {useSelector} from "react-redux";
 
-const Footer = props => {
+const Footer = () => {
     const { t } = useTranslation(["common"]);
+    const { lang } = useSelector(state => state.ui);
     return (
         <Container className="justify-content-center" style={{height:"40vh"}}>
             <Row className="justify-content-md-center">
@@ -64,10 +67,10 @@ const Footer = props => {
             </Row>
             <Row className="justify-content-md-center">
                 <Col xs lg="2" className="text-end">
-                    {t("common:faq")}
+                    <a href={dictFaq[lang]}>{t("common:faq")}</a>
                 </Col>
                 <Col xs lg="2" className="text-start">
-                    {t("common:aboutUs")}
+                    <a href={dictAboutUs[lang]}>{t("common:aboutUs")}</a>
                 </Col>
             </Row>
         </Container>

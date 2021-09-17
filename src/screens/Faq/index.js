@@ -1,6 +1,8 @@
 import {Accordion, Card, Col, Container, Row} from "react-bootstrap";
+import {useTranslation} from "react-i18next";
 
-const Faq = props => {
+const Faq = () => {
+    const { t } = useTranslation(["common"]);
     return (
         <Container className="justify-content-center pt-5" style={{height:"70vh"}}>
             <Row className="justify-content-md-center">
@@ -9,7 +11,7 @@ const Faq = props => {
                         <Container>
                             <Row >
                                 <Col>
-                                    Faq
+                                    {t("common:faq")}
                                 </Col>
                             </Row>
                             <Row>

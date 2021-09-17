@@ -74,7 +74,10 @@ const SignIn = () => {
                                                 name="email"
                                                 placeholder={t("login:email")}
                                                 aria-invalid={errors.email ? "true" : "false"}
-                                                {...register('email', { required: true })}/>
+                                                {...register('email',
+                                                    { required: true,
+                                                        pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                                    })}/>
                                             {errors.email && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}
