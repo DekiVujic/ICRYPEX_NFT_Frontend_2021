@@ -2,7 +2,10 @@
 $site-custom-font-family: ();
 $site-custom-font-family: map-merge(
                 (
-                        "default":              $site-font-family-default
+                        "default":              $site-font-family-default,
+                        "gilroyregular":        $site-font-family-gilroy-regular,
+                        "gilroysemibold":       $site-font-family-gilroy-semibold,
+                        "gilroybold":           $site-font-family-gilroy-bold,
                 ),
                 $site-custom-font-family
 );
