@@ -1,12 +1,48 @@
-# Getting Started with Create React App
+# Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Web Public Area Frontend List
+- [Home_Page](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Home_Page.html)
+   
+
+# NodeJS Kurulumu
+  
+### NodeJS Kurulumu  
+Öncelikle **npm** paket yöneticimizin olması lazım, yoksa [NodeJS](https://nodejs.org/) ‘in resmi sitesi olan [nodejs.org](https://nodejs.org/en/download/)’tan NodeJS’i bilgisayarımıza yüklememiz gerek.  Yüklemeyi yaptıktan sonra _terminal_ yada _command prompt’_a  
+  
+     npm install --global gulp-cli  
+
+yazmamız gerekmektedir. Bu sayade Gulp’un cli(Command Line Interface)sini bilgisayarımıza yüklemiş olacağız, bu bize Gulp’u terminalimizde **gulp** komutunu (command) kullanmamızı sağlıcaktır. Bu işlemi de yaptıktan sonra Gulp görevleri yazmaya başlayalım.  
+  
+  
+#### Projeyi PC'ye İndirme  
+Komut Satırına Aşağıdaki Kodu Yazın  
+
+     git clone https://github.com/orcunkilicaslan/ICRYPEX_NFT_Frontend_2021.git  
+
+#### Projeyi PC'de Çalıştırma  
+Komut Satırına Aşağıdaki Kodu Yazın  
+
+     npm install
+     npm install -g npm  
+
+
+Projeyi Derleyecekseniz İse Komut Satırına Aşağıdaki Kodu Yazın  
+
+     gulp build --production
+
+Projede Çalışacaksanız İse Komut Satırına Aşağıdaki Kodu Yazın  
+
+     gulp devel  
+
+
+# React App
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+     npm start 
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +50,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+     npm test
+
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+     npm run build
+
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +67,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+     npm run eject
+
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
