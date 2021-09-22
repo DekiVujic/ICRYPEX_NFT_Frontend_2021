@@ -1,12 +1,12 @@
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
-import {useTranslation} from "react-i18next";
-import {useSelector} from "react-redux";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import {dictForgotPassword, dictSignUp} from "../../routes";
+import { dictForgotPassword, dictSignUp } from "../../constants";
 
 
 const SignIn = () => {
-    const { t } = useTranslation(["common","login"]);
+    const { t } = useTranslation(["common", "login"]);
     const { lang } = useSelector(state => state.ui);
 
     const {
@@ -17,7 +17,7 @@ const SignIn = () => {
     } = useForm({
         mode: "onChange",
         defaultValues: {
-            userName : "",
+            userName: "",
             email: "",
             password: "",
             recaptcha: "",
@@ -27,11 +27,11 @@ const SignIn = () => {
     const onSubmit = data => {
         clearErrors();
         console.log("onSubmit")
-                //TODO
-                    // call rest api
+        //TODO
+        // call rest api
     };
     return (
-        <Container className="justify-content-center pt-5" style={{height:"100vh"}}>
+        <Container className="justify-content-center pt-5" style={{ height: "100vh" }}>
             <Row className="justify-content-md-center">
                 <Card style={{ width: '35rem', height: '36rem' }} className="text-center">
                     <Card.Body >
@@ -50,8 +50,8 @@ const SignIn = () => {
                             <Row className="justify-content-center text-start">
                                 <Col>
                                     <Form autoComplete="off"
-                                            noValidate
-                                            onSubmit={handleSubmit(onSubmit)}>
+                                        noValidate
+                                        onSubmit={handleSubmit(onSubmit)}>
                                         <Form.Group className="mb-3">
                                             <Form.Label>{t("login:userName")}</Form.Label>
                                             <Form.Control
@@ -75,9 +75,10 @@ const SignIn = () => {
                                                 placeholder={t("login:email")}
                                                 aria-invalid={errors.email ? "true" : "false"}
                                                 {...register('email',
-                                                    { required: true,
+                                                    {
+                                                        required: true,
                                                         pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                                                    })}/>
+                                                    })} />
                                             {errors.email && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}
@@ -91,7 +92,7 @@ const SignIn = () => {
                                                 name="password"
                                                 placeholder={t("login:password")}
                                                 aria-invalid={errors.password ? "true" : "false"}
-                                                {...register('password', { required: true })}/>
+                                                {...register('password', { required: true })} />
                                             {errors.password && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}

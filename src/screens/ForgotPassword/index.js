@@ -1,12 +1,12 @@
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
-import {useTranslation} from "react-i18next";
-import {useSelector} from "react-redux";
-import {dictSignIn} from "../../routes";
-import {useForm} from "react-hook-form";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { dictSignIn } from "../../constants";
+import { useForm } from "react-hook-form";
 
 
 const ForgotPassword = () => {
-    const { t } = useTranslation(["common","login"]);
+    const { t } = useTranslation(["common", "login"]);
     const { lang } = useSelector(state => state.ui);
 
     const {
@@ -28,7 +28,7 @@ const ForgotPassword = () => {
         // call rest api
     };
     return (
-        <Container className="justify-content-center pt-5" style={{height:"100vh"}}>
+        <Container className="justify-content-center pt-5" style={{ height: "100vh" }}>
             <Row className="justify-content-md-center">
                 <Card style={{ width: '35rem', height: '250px' }} className="text-center">
                     <Card.Body >
@@ -47,8 +47,8 @@ const ForgotPassword = () => {
                             <Row className="justify-content-center text-start">
                                 <Col>
                                     <Form autoComplete="off"
-                                          noValidate
-                                          onSubmit={handleSubmit(onSubmit)}>
+                                        noValidate
+                                        onSubmit={handleSubmit(onSubmit)}>
                                         <Form.Group className="mb-3">
                                             <Form.Label>{t("login:email")}</Form.Label>
                                             <Form.Control
@@ -56,7 +56,7 @@ const ForgotPassword = () => {
                                                 name="email"
                                                 placeholder={t("login:email")}
                                                 aria-invalid={errors.email ? "true" : "false"}
-                                                {...register('email', { required: true })}/>
+                                                {...register('email', { required: true })} />
                                             {errors.email && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}

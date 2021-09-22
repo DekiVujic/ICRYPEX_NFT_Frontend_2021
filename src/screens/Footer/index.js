@@ -1,13 +1,13 @@
-import {Col, Container, FormControl, InputGroup, Row} from "react-bootstrap";
-import {useTranslation} from "react-i18next";
-import {dictAboutUs, dictFaq, dictSignIn} from "../../routes";
-import {useSelector} from "react-redux";
+import { Col, Container, FormControl, InputGroup, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import { dictAboutUs, dictFaq, dictSignIn } from "../../constants";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
     const { t } = useTranslation(["common"]);
     const { lang } = useSelector(state => state.ui);
     return (
-        <Container className="justify-content-center" style={{height:"40vh"}}>
+        <Container className="justify-content-center" style={{ height: "40vh" }}>
             <Row className="justify-content-md-center">
                 <Col xs lg="6" className="text-center mb-2">
                     {t("common:auction")}
@@ -77,4 +77,4 @@ const Footer = () => {
     )
 }
 
-export default  Footer
+export default Footer

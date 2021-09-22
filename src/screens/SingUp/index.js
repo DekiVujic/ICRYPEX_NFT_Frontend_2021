@@ -1,12 +1,12 @@
-import {Button, Card, Col, Container, Form, Row } from "react-bootstrap";
-import {useTranslation} from "react-i18next";
-import {dictSignIn} from "../../routes";
-import {useSelector} from "react-redux";
-import {useForm} from "react-hook-form";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import { dictSignIn } from "../../constants";
+import { useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
 
 
 const SignUp = () => {
-    const { t } = useTranslation(["common","login"]);
+    const { t } = useTranslation(["common", "login"]);
     const { lang } = useSelector(state => state.ui);
     const {
         register,
@@ -28,11 +28,11 @@ const SignUp = () => {
     };
 
     return (
-        <Container className="justify-content-center pt-5" style={{height:"80rem"}}>
+        <Container className="justify-content-center pt-5" style={{ height: "80rem" }}>
             <Row className="justify-content-md-center">
                 <Card style={{ width: '35rem', height: '65rem' }} className="text-center">
                     <Card.Body >
-                        <Container style={{height:"70vh"}}>
+                        <Container style={{ height: "70vh" }}>
                             <Row className="justify-content-center">
                                 <Col>
                                     {t("common:signUp")}
@@ -46,9 +46,9 @@ const SignUp = () => {
                             </Row>
                             <Row className="justify-content-center">
                                 <Col>
-                                    <Card  style={{ width: '30rem', height: '15vh', color:'white' }} className="text-center"  bg="dark">
+                                    <Card style={{ width: '30rem', height: '15vh', color: 'white' }} className="text-center" bg="dark">
                                         <Card.Body >
-                                            <Container style={{height:"70vh"}}>
+                                            <Container style={{ height: "70vh" }}>
                                                 <Row className="justify-content-center">
                                                     <Col>
                                                         {t("common:oneAccountTwoPlatforms")}
@@ -73,8 +73,8 @@ const SignUp = () => {
                             <Row className="justify-content-center text-start">
                                 <Col>
                                     <Form autoComplete="off"
-                                          noValidate
-                                          onSubmit={handleSubmit(onSubmit)}>
+                                        noValidate
+                                        onSubmit={handleSubmit(onSubmit)}>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                             <Form.Label>{t("login:firstname")}</Form.Label>
                                             <Form.Control
@@ -82,7 +82,7 @@ const SignUp = () => {
                                                 name="firstname"
                                                 placeholder={t("login:firstname")}
                                                 aria-invalid={errors.firstname ? "true" : "false"}
-                                                {...register('firstname', { required: true })}/>
+                                                {...register('firstname', { required: true })} />
                                             {errors.firstname && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}
@@ -96,7 +96,7 @@ const SignUp = () => {
                                                 name="surname"
                                                 placeholder={t("login:surname")}
                                                 aria-invalid={errors.surname ? "true" : "false"}
-                                                {...register('firstname', { required: true })}/>
+                                                {...register('firstname', { required: true })} />
                                             {errors.surname && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}
