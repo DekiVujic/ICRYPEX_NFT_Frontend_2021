@@ -1,0 +1,118 @@
+.sitecontent{
+
+  &-title{
+    margin-left: auto;
+    margin-right: auto;
+    $sitetitleclassname: &;
+
+    h1,h2,h3,h4,h5,h6{
+      margin: 0;
+    }
+    h1,h2,h3,h4,h5,h6,p{
+      position: relative;
+    }
+    p{
+      margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    &-xl{
+      h1,h2,h3{@include rfs(2rem); line-height: 1.2;}
+      h4,h5,h6{@include rfs(1.8rem); line-height: 1.2;}
+      p{@include rfs(1.125rem); line-height: 1.2;}
+      h1+p,h2+p,h3+p,p+h1,p+h2,p+h3{margin-top: 15px;}
+      h4+p,h5+p,h6+p,p+h4,p+h5,p+h6{margin-top: 10px;}
+
+      @include BootstrapMaxWidthResponsive(1k){
+        h1,h2,h3{@include rfs(1.875rem);}
+        p{@include rfs(1rem);}
+      }
+    }
+
+    &-lg{
+      h1,h2,h3{@include rfs(2.0rem);}
+      p{}
+      h1+p,h2+p,h3+p,p+h1,p+h2,p+h3{margin-top: 10px;}
+    }
+
+    &-md{
+      h3,h4,h5{@include rfs(1.6rem);}
+      p{}
+      h1+p,h2+p,h3+p,p+h1,p+h2,p+h3{margin-top: 10px;}
+    }
+
+    &-sm{
+      h3,h4,h5{}
+      p{@include rfs(1.0rem);}
+      h3+p,h4+p,h5+p,p+h3,p+h4,p+h5{margin-top: 10px;}
+    }
+
+    &-left{text-align: left;}
+    &-center{text-align: center;}
+    &-right{text-align: right;}
+
+    &-flex{
+      @include flexbox-display-flex();
+      @include flexbox-justify-content(space-between);
+      @include flexbox-align-items(flex-end);
+    }
+
+    &-width500{max-width: 500px;}
+    &-width600{max-width: 600px;}
+    &-width700{max-width: 700px;}
+    &-width800{max-width: 800px;}
+    &-width900{max-width: 900px;}
+    &-width1000{max-width: 1000px;}
+    &-width1100{max-width: 1100px;}
+    &-width1200{max-width: 1200px;}
+
+    @include BootstrapMaxWidthResponsive(1k){
+      &-width900{max-width: 750px;}
+      &-width1100{max-width: 960px;}
+    }
+    @include BootstrapMaxWidthResponsive(xl){
+      &-width900{max-width: 660px;}
+      &-width1100{max-width: 780px;}
+    }
+    @include BootstrapMaxWidthResponsive(lg){
+      &-width900{max-width: 580px;}
+      &-width1100{max-width: 640px;}
+    }
+  }
+
+  &-desc{
+    color: $site-font-clr-sec;
+    line-height: 1.2;
+
+    h1,h2,h3,h4,h5,h6{color: $site-font-clr-pri;}
+    h1{@include rfs(1.875rem); line-height: 1.2;}
+    h2{@include rfs(1.875rem); line-height: 1.2;}
+    h3{@include rfs(1.60rem); line-height: 1.2;}
+    h4{@include rfs(1.50rem); line-height: 1.2;}
+    h5{@include rfs(1.25rem); line-height: 1.2;}
+    h6{@include rfs(1.125rem); line-height: 1.2;}
+    h1+p,h2+p,h3+p,h1+ul,h2+ul,h3+ul,h1+ol,h2+ol,h3+ol{margin-top: 10px;} h4+p,h5+p,h6+p,h4+ul,h5+ul,h6+ul,h4+ol,h5+ol,h6+ol{margin-top: 5px;}
+    p+h1,p+h2,p+h3,p+h4,ul+h1,ul+h2,ul+h3,ul+h4{margin-top: 30px;} p+h5,p+h6,ul+h5,ul+h6{margin-top: 15px;}
+
+    p+p,p+ul,p+ol,ul+p,ol+p{margin-top: 1.25rem;}
+    p, ul, ol{@include rfs(1.125rem); font-weight: $font-weight-normal;}
+    ul > li, ol > li{/*margin-bottom: 15px;*/}
+    ul > li:last-child, ol > li:last-child{margin-bottom: 0;}
+    p a, li a{color: $site-font-clr-pri; font-weight: $font-weight-bold;}
+
+    @include BootstrapMaxWidthResponsive(1k){
+      h1{@include rfs(1.625rem);}
+      h2{@include rfs(1.625rem);}
+      h5{@include rfs(1.125rem);}
+      p, ul, ol{@include rfs(1rem);}
+    }
+  }
+}
+
+@media print{
+  .sitecontent-title *,
+  .sitecontent-desc *{color: $site-font-clr-pri !important;}
+}

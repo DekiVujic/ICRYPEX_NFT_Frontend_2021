@@ -1,0 +1,18 @@
+.icon{
+  $iconclassname: &;
+
+  &-sprtsmclrd{
+    background-image: url(#{$path-img-url-icons}/xxx.svg#{$cache-busting});
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    position: relative;
+
+    &#{$iconclassname}-14{
+      width: 14px;
+      height: 14px;
+
+      &#{$iconclassname}-edit{background-position: calc(-14px*0) 0;}
+    }
+  }
+}

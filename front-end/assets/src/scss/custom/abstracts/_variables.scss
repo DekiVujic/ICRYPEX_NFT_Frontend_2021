@@ -1,0 +1,27 @@
+
+/* Site Main Path Settings */
+$cache-busting:                     #{'?v='}(unique_id());
+$path-assets-url:                   "../../../assets" !default;
+$path-fonts-url:                    "#{$path-assets-url}/fonts" !default;
+$path-img-url:                      "#{$path-assets-url}/img" !default;
+$path-img-url-icons:                "#{$path-img-url}/icons" !default;
+/* Site Main Path Settings */
+
+/* Site General Color Settings */
+$site-clr-white:                      #FFFFFF;
+$site-clr-black:                      #000000;
+$site-clr-blue:                       #357CE1;
+$site-clr-blue-dark:                  #004378;
+$site-clr-cyan:                       #17A2B8;
+$site-clr-green:                      #70A800;
+$site-clr-red:                        #B82C0D;
+$site-clr-orange:                     #E67948;
+$site-clr-yellow:                     #FF8C00;
+/* Site General Color Settings */
+
+/* Site Main Settings */
+$site-font-family-default:            'Barlow Semi Condensed', sans-serif;
+$site-font-size-base:                 1rem;
+$site-font-clr-pri:                   #000000;
+$site-font-clr-sec:                   #333333;
+/* Site Main Color Settings */
