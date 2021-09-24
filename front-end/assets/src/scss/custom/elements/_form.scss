@@ -1,0 +1,45 @@
+
+.siteform{
+  $siteform: &;
+
+  .form{}
+
+  .form-group{
+    margin-bottom: $spacer;
+  }
+
+  .recaptcha{
+    padding-left: 0;
+
+    &-area{
+      @include flexbox-display-flex();
+      @include flexbox-align-items(center);
+    }
+
+    &-check{
+      position:relative;
+      width: $form-check-input-width;
+      height: $form-check-input-width;
+      overflow: hidden;
+      margin-right: 9px;
+      border: $form-check-input-border;
+      @include border-radius($form-check-input-border-radius);
+
+      .g-recaptcha{
+        position:absolute;
+        top: -27px;
+        left: -23px;
+        @include scale(0.95);
+      }
+    }
+
+    label{
+      font-weight: $font-weight-normal;
+      margin: 0;
+
+      &::before,
+      &::after{display: none;}
+    }
+  }
+
+}

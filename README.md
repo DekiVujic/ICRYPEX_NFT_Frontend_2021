@@ -2,6 +2,7 @@
 
 #### Web Public Area Frontend List
 - [Home_Page](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Home_Page.html)
+- [Sing_Up](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sing_Up.html)
    
 
 # NodeJS Kurulumu

@@ -1,0 +1,108 @@
+
+.header{
+  background-color: $white;
+  //position: fixed;
+  //width: 100%;
+  //z-index: $zindex-fixed;
+  //@include transition-multiple(background-color 0.3s ease-in-out);
+  $header: &;
+
+  &-web{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+    @include flexbox-align-items(center);
+    margin-right: calc(#{$grid-gutter-width} * -0.5);
+    margin-left: calc(#{$grid-gutter-width} * -0.5);
+    padding: 10px 0;
+    //@include transition-multiple(padding 0.3s ease-in-out);
+
+    > *{
+      @include flexbox-display-flex();
+      @include flexbox-flex-wrap(wrap);
+      @include flexbox-align-items(center);
+      width: 100%;
+      max-width: 100%;
+      padding-right: calc(#{$grid-gutter-width} * 0.5);
+      padding-left: calc(#{$grid-gutter-width} * 0.5);
+    }
+
+    #{$header}-left,
+    #{$header}-right{
+      @include flexbox-flex(0 0 auto);
+      width: 400px;
+    }
+
+    #{$header}-left{
+      @include flexbox-justify-content(flex-start);
+    }
+
+    #{$header}-right{
+      @include flexbox-justify-content(flex-end);
+
+      > *{
+        @include flexbox-flex(0 0 auto);
+        width: auto;
+        padding-right: calc(#{$grid-gutter-width} * 0.25);
+
+        &:last-child{padding-right: 0;}
+      }
+    }
+
+    #{$header}-nav{
+      @include flexbox-justify-content(center);
+      @include flexbox-flex(1 0 0%);
+      position: relative;
+    }
+
+    #{$header}-logo{
+      .headlogo{
+
+        &-text{
+          &-clr01{fill: #243455;}
+          &-clr02{fill: #357ce1;}
+        }
+
+        &-end{
+          &-txt{fill: #FFFFFF;}
+          &-bg{fill: #357ce1;}
+        }
+      }
+    }
+
+    #{$header}-btns{
+      @include flexbox-display-flex();
+      @include flexbox-flex-wrap(wrap);
+      @include flexbox-align-items(center);
+
+      .btn{
+        @include flexbox-flex(0 0 auto);
+        width: auto;
+        min-width: 100px;
+        margin-left: calc(#{$grid-gutter-width} * 0.25);
+
+        &:first-child{margin-left: 0;}
+      }
+
+      .btn-info{
+        //@include button-variant($cyan, $cyan, $cyan, $cyan, $cyan, $white);
+        @include button-variant($cyan, $cyan, $cyan, darken($cyan, 5%), darken($cyan, 5%), $white);
+        color: $white;
+      }
+
+      .btn-outline-info{
+        @include button-variant(transparent, $cyan, $cyan, darken($cyan, 5%), darken($cyan, 5%), $white);
+        color: $cyan;
+      }
+
+    }
+
+    #{$header}-user{
+
+    }
+
+    #{$header}-lang{
+      .btn{}
+    }
+  }
+
+}
