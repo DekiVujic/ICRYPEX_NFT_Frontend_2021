@@ -84,7 +84,6 @@
       }
 
       .btn-info{
-        //@include button-variant($cyan, $cyan, $cyan, $cyan, $cyan, $white);
         @include button-variant($cyan, $cyan, $cyan, darken($cyan, 5%), darken($cyan, 5%), $white);
         color: $white;
       }
@@ -96,13 +95,10 @@
 
     }
 
-    #{$header}-user{
-
-    }
+    #{$header}-user{}
 
     #{$header}-lang{
       .btn{}
     }
   }
-
 }

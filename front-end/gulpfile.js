@@ -65,6 +65,7 @@ gulp.task('sass-custom', () => {
 gulp.task('script-custom', () => {
     return gulp.src([
         folderSrcMain + 'script/vendors/**/bootstrap.js',
+        folderSrcMain + 'script/vendors/**/swiper.js',
         folderSrcMain + 'script/vendors/**/app.js',
         folderSrcMain + 'script/custom/**/app.js'
     ])
