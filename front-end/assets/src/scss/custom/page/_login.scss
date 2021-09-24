@@ -74,7 +74,12 @@
       form .submitbtn{margin-bottom: 0;}
     }
 
-    &.signin{}
+    &.signin{
+      .loginarea-form{
+        border-top: 1px solid $blue;
+        padding-top: 20px;
+      }
+    }
 
   }
 
