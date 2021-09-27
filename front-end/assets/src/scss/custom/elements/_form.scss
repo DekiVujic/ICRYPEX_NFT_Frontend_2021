@@ -8,6 +8,13 @@
     margin-bottom: $spacer;
   }
 
+  .form-floating{
+
+    > label{
+      top: 2px;
+    }
+  }
+
   .recaptcha{
     padding-left: 0;
 

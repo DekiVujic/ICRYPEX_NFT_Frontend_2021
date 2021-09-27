@@ -59,6 +59,29 @@
 
     #{$loginarea}-form{
 
+      .form-floating{
+
+        &.showhidepass{
+          position: relative;
+
+          .form-control{
+            padding-right: 60px;
+          }
+
+          .showhidebtn{
+            all: unset;
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            @include translateY(-50%);
+          }
+        }
+      }
+
       .phonearea{
         .input-group-append{
           padding-right: $spacer;

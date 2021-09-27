@@ -16,6 +16,22 @@
     }
   }
 
+  &-btnssmclrd{
+    background-image: url(#{$path-img-url-icons}/icons_spite_btnssmclrd.svg#{$cache-busting});
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    position: relative;
+
+    &#{$iconclassname}-24{
+      width: 24px;
+      height: 24px;
+
+      &#{$iconclassname}-eyeshow{background-position: calc(-24px*0) 0;}
+      &#{$iconclassname}-eyehide{background-position: calc(-24px*1) 0;}
+    }
+  }
+
   &-sprtsocialmedia{
     background-image: url(#{$path-img-url-icons}/icons_spite_24_footer_social.svg#{$cache-busting});
     background-repeat: no-repeat;
