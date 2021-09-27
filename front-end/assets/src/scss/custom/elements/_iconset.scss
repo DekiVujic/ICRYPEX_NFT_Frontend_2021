@@ -32,6 +32,26 @@
     }
   }
 
+  &-usermenulinkssmclrd{
+    background-image: url(#{$path-img-url-icons}/icons_spite_usermenulinkssmclrd.svg#{$cache-busting});
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    position: relative;
+
+    &#{$iconclassname}-28{
+      width: 28px;
+      height: 28px;
+
+      &#{$iconclassname}-mywallet{background-position: calc(-28px*0) 0;}
+      &#{$iconclassname}-accountactivity{background-position: calc(-28px*1) 0;}
+      &#{$iconclassname}-mynfts{background-position: calc(-28px*2) 0;}
+      &#{$iconclassname}-setting{background-position: calc(-28px*3) 0;}
+      &#{$iconclassname}-history{background-position: calc(-28px*4) 0;}
+      &#{$iconclassname}-logout{background-position: calc(-28px*5) 0;}
+    }
+  }
+
   &-sprtsocialmedia{
     background-image: url(#{$path-img-url-icons}/icons_spite_24_footer_social.svg#{$cache-busting});
     background-repeat: no-repeat;
