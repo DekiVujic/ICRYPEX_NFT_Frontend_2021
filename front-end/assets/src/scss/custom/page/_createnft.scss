@@ -1,0 +1,52 @@
+
+.createnftarea{
+  //padding: 30px 0;
+  $createnftarea: &;
+
+  &-box{
+    background-color: $white;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    @include border-radius($border-radius);
+
+    @include BootstrapMaxWidthResponsive(1k){
+      max-width: 800px;
+    }
+
+    #{$createnftarea}-boxtitle{}
+
+    #{$createnftarea}-form{
+      padding-top: 20px;
+
+      .createnftform{
+
+        &-top{
+          @include flexbox-display-flex();
+          @include flexbox-flex-wrap(wrap);
+
+          &-left{
+            @include flexbox-flex(0 0 auto);
+            width: 280px;
+          }
+
+          &-right{
+            @include flexbox-flex(1 0 0%);
+            padding-left: $grid-gutter-width;
+          }
+        }
+
+        .uploadarea{
+          padding: 15px;
+          min-height: 380px;
+          border: 1px solid $gray-400;
+          @include border-radius($border-radius);
+        }
+
+      }
+
+    }
+
+  }
+}

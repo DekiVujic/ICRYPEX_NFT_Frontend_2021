@@ -101,7 +101,7 @@
         @include flexbox-display-flex();
         @include flexbox-flex-wrap(wrap);
         @include flexbox-align-items(center);
-        color: $gray-700;
+        color: $site-font-clr-pri;
         text-decoration: none;
 
         .useravatar{
@@ -109,7 +109,7 @@
           width: 40px;
           height: 40px;
           margin-right: 5px;
-          border: 1px solid $gray-700;
+          border: 1px solid $site-font-clr-pri;
           @include border-radius($border-radius-pill);
           overflow: hidden;
 
@@ -121,7 +121,7 @@
         }
 
         .username{
-          color: $gray-700;
+          color: $site-font-clr-pri;
           max-width: 120px;
         }
       }
@@ -141,7 +141,7 @@
             @include flexbox-display-flex();
             @include flexbox-flex-wrap(wrap);
             @include flexbox-align-items(center);
-            color: $gray-700;
+            color: $site-font-clr-pri;
             font-family: $site-font-family-gilroy-semibold;
             padding-left: 0;
             padding-right: 0;
