@@ -146,9 +146,9 @@ $border-widths: (
         5: 5px
 );
 $border-color:                                  $gray-300;
-$border-radius:                                 1rem;
+$border-radius:                                 0.875rem;
 $border-radius-sm:                              0.2rem;
-$border-radius-lg:                              1rem;
+$border-radius-lg:                              1.25rem;
 $border-radius-pill:                            50rem;
 $box-shadow:                                    0 .5rem 1rem rgba($black, .15);
 $box-shadow-sm:                                 0 .125rem .25rem rgba($black, .075);
@@ -169,7 +169,7 @@ $font-family-code:                              var(--#{$variable-prefix}font-mo
 $font-size-root:                                null;
 $font-size-base:                                $site-font-size-base; // Assumes the browser default, typically `16px`
 $font-size-sm:                                  $font-size-base * .875;
-$font-size-lg:                                  $font-size-base * 1.25;
+$font-size-lg:                                  $font-size-base; //$font-size-base * 1.25;
 $font-weight-lighter:                           lighter;
 $font-weight-light:                             300;
 $font-weight-normal:                            400;
@@ -267,7 +267,7 @@ $input-btn-padding-x:                           .75rem;
 $input-btn-font-family:                         null;
 $input-btn-font-size:                           $font-size-base;
 $input-btn-line-height:                         1.65; //$line-height-base;
-$input-btn-focus-width:                         .25rem;
+$input-btn-focus-width:                         .0rem;
 $input-btn-focus-color-opacity:                 .25;
 $input-btn-focus-color:                         rgba($component-active-bg, $input-btn-focus-color-opacity);
 $input-btn-focus-blur:                          0;
@@ -350,7 +350,7 @@ $input-border-width:                            $input-btn-border-width;
 $input-box-shadow:                              $box-shadow-inset;
 $input-border-radius:                           $border-radius;
 $input-border-radius-sm:                        $border-radius-sm;
-$input-border-radius-lg:                        $border-radius-lg;
+$input-border-radius-lg:                        $border-radius;
 $input-focus-bg:                                $input-bg;
 $input-focus-border-color:                      tint-color($component-active-bg, 50%);
 $input-focus-color:                             $input-color;

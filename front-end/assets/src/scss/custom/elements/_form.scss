@@ -8,10 +8,51 @@
     margin-bottom: $spacer;
   }
 
+  .formfieldset{
+
+    > *:last-child{
+      margin-bottom: 0;
+    }
+
+  }
+
   .form-floating{
 
     > label{
       top: 2px;
+    }
+  }
+
+  .setspinner{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+    @include flexbox-align-items(center);
+
+    &-input{
+      @include flexbox-flex(1 0 0%);
+    }
+
+    &-info{
+      @include flexbox-flex(1 0 0%);
+      padding-left: $grid-gutter-width * 0.5;
+    }
+
+    .input-group{
+      background-color: $input-bg;
+      background-clip: padding-box;
+      padding: $input-padding-y;
+      border: $input-border-width solid $input-border-color;
+      @include border-radius($input-border-radius);
+      appearance: none; // Fix appearance for date inputs in Safari
+
+      .form-control{
+        min-height: auto;
+        padding: 0 $input-padding-y;
+        margin: 0 $input-padding-x !important;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+      }
     }
   }
 

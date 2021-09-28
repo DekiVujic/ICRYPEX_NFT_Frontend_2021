@@ -9,7 +9,7 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    @include border-radius($border-radius);
+    @include border-radius($border-radius-lg);
 
     @include BootstrapMaxWidthResponsive(1k){
       max-width: 500px;

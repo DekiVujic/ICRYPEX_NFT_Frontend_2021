@@ -9,7 +9,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    @include border-radius($border-radius);
+    @include border-radius($border-radius-lg);
 
     @include BootstrapMaxWidthResponsive(1k){
       max-width: 800px;
@@ -39,9 +39,17 @@
 
         .uploadarea{
           padding: 15px;
-          min-height: 380px;
           border: 1px solid $gray-400;
           @include border-radius($border-radius);
+
+          .dropzone{
+            height: 250px;
+            min-height: initial;
+          }
+
+          .sitecontent{
+            padding-top: 20px;
+          }
         }
 
       }

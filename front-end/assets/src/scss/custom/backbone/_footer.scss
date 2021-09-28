@@ -31,10 +31,6 @@
         padding: 3px;
         @include border-radius($btn-border-radius * 1.25);
 
-        .form-control:focus, .btn:focus{
-          @include box-shadow(none);
-        }
-
         .form-control{
           color: $white;
           background-color: #1E212F;

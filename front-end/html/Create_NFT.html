@@ -82,23 +82,108 @@
                     <h2>Create NFT</h2>
                 </div>
                 <div class="createnftarea-form">
-                    <div class="createnftform siteform">
+                    <form class="createnftform siteform" autocomplete="off" novalidate>
                         <div class="createnftform-top">
                             <div class="createnftform-top-left">
                                 <div class="uploadarea">
-                                    <form class="dropzone createnftimgfile" action="/file-upload" autocomplete="off" novalidate="">
-                                        <input type="hidden" name="filetype" value="1">
-                                        <div class="dz-message" data-dz-message="">
-                                            <i class="dz-message-icon"></i>
-                                            <span class="dz-message-btxt">Sürükle &amp; Bırak</span>
-                                            <span class="dz-message-stxt">[JPG, PNG]<br />Maks 1MB</span>
+                                    <div class="dropzone createnftuploadfile">
+                                        <div class="fallback">
+                                            <input type="file" name="images" />
                                         </div>
-                                    </form>
+                                    </div>
+                                    <div class="sitecontent sitecontent-desc sitecontent-center">
+                                        <h5>Upload New NFT</h5>
+                                        <p>Drag and drop file or click to upload (Max File Size 5MB)</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="createnftform-top-right">BBB</div>
+                            <div class="createnftform-top-right">
+                                <fieldset class="formfieldset">
+                                    <div class="form-group form-floating">
+                                        <input class="form-control form-control-lg" type="text" name="collectionname" placeholder="Collection Name" required />
+                                        <label>Collection Name</label>
+                                    </div>
+                                    <div class="form-group form-floating">
+                                        <input class="form-control form-control-lg" type="text" name="assetname" placeholder="Asset Name" required />
+                                        <label>Asset Name</label>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-lg">
+                                            <div class="form-group form-floating">
+                                                <input class="form-control form-control-lg" type="text" name="assetsymbol" placeholder="Asset Symbol" required />
+                                                <label>Asset Symbol</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg">
+                                            <div class="form-group form-floating col-lg">
+                                                <select class="form-select form-select-lg" name="nfttype">
+                                                    <option value="-1" selected disabled>Open this select menu</option>
+                                                    <option value="Art">Art</option>
+                                                    <option value="Music">Music</option>
+                                                    <option value="Collectibles">Collectibles</option>
+                                                </select>
+                                                <label>NFT Type</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-floating">
+                                        <input class="form-control form-control-lg" type="url" name="externallink" placeholder="External Link" />
+                                        <label>External Link</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Amount</label>
+                                        <div class="setspinner">
+                                            <div class="setspinner-input">
+                                                <div class="input-group JSInputSpinner">
+                                                    <div class="input-group-prepend">
+                                                        <button type="button" class="btn btn-primary JSInputSpinnerMin">-</button>
+                                                    </div>
+                                                    <input id="datacurr" type="number" class="form-control form-control-lg text-center" value="0" min="0" max="100" step="1" />
+                                                    <div class="input-group-append">
+                                                        <button type="button" class="btn btn-primary JSInputSpinnerMax">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="setspinner-info">
+                                                <span class="sitecolorblue"><u>Max</u></span> (500)
+                                            </div>
+                                        </div>
+                                        <script>
+                                            var iSpinner = document.querySelectorAll(".JSInputSpinner");
+                                            for (var index = 0; index < iSpinner.length; index ++) {
+                                                var spinnerIndex = iSpinner[index].querySelector("input"),
+                                                    spinnerId = spinnerIndex.getAttribute("id"),
+                                                    spinnerMin = spinnerIndex.getAttribute("min"),
+                                                    spinnerMax = spinnerIndex.getAttribute("max"),
+                                                    spinnerStep = spinnerIndex.getAttribute("step");
+                                                document.querySelector(".JSInputSpinnerMin").setAttribute(
+                                                    "onclick",
+                                                    "iSpinnerBtn('" + spinnerId + "', -" + spinnerStep + ", " + spinnerMin + ")"
+                                                );
+                                                document.querySelector(".JSInputSpinnerMax").setAttribute(
+                                                    "onclick",
+                                                    "iSpinnerBtn('" + spinnerId + "', " + spinnerStep + ", " + spinnerMax + ")"
+                                                );
+                                            }
+
+                                            function iSpinnerBtn(id, s, m) {
+                                                var el = document.getElementById(id);
+                                                if (s > 0) {
+                                                    if (parseInt(el.value) < m) {
+                                                        el.value = parseInt(el.value) + s;
+                                                    }
+                                                } else {
+                                                    if (parseInt(el.value) > m) {
+                                                        el.value = parseInt(el.value) + s;
+                                                    }
+                                                }
+                                            }
+                                        </script>
+                                    </div>
+                                </fieldset>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
