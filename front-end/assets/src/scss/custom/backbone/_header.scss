@@ -11,8 +11,8 @@
     @include flexbox-display-flex();
     @include flexbox-flex-wrap(wrap);
     @include flexbox-align-items(center);
-    margin-right: calc(#{$grid-gutter-width} * -0.5);
-    margin-left: calc(#{$grid-gutter-width} * -0.5);
+    margin-right: -$grid-gutter-width * 0.5;
+    margin-left: -$grid-gutter-width * 0.5;
     padding: 10px 0;
     //@include transition-multiple(padding 0.3s ease-in-out);
 
@@ -22,8 +22,8 @@
       @include flexbox-align-items(center);
       width: 100%;
       max-width: 100%;
-      padding-right: calc(#{$grid-gutter-width} * 0.5);
-      padding-left: calc(#{$grid-gutter-width} * 0.5);
+      padding-left: $grid-gutter-width * 0.5;
+      padding-right: $grid-gutter-width * 0.5;
     }
 
     #{$header}-left,

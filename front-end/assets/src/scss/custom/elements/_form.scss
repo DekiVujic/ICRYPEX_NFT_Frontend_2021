@@ -10,6 +10,15 @@
 
   .formfieldset{
 
+    + .formfieldset{
+      padding-top: 30px;
+    }
+
+    legend{
+      color: $site-font-clr-pri;
+      font-family: $site-font-family-gilroy-semibold;
+    }
+
     > *:last-child{
       margin-bottom: 0;
     }
@@ -21,6 +30,10 @@
     > label{
       top: 2px;
     }
+  }
+
+  textarea.form-control{
+    min-height: 100px;
   }
 
   .setspinner{
