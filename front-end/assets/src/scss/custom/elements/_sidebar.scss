@@ -1,0 +1,10 @@
+
+.sidebar{
+  background-color: $white;
+  min-width: 380px;
+  padding: 20px;
+  @include border-radius($border-radius-lg);
+
+  &-boxtitle{}
+
+}

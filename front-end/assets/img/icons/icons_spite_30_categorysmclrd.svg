@@ -1,0 +1,19 @@
+<svg id="icons_spite_30_categorysmclrd" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Filter">
+    <rect id="icon_bg" width="30" height="30" fill="#fff" opacity="0"/>
+    <g id="Filter-2" data-name="Filter" transform="translate(2.114 2.354)">
+      <g id="icon" transform="translate(-61.194 -136.463)">
+        <g id="Group_10" data-name="Group 10" transform="translate(64.652 140.78)">
+          <g id="Group_9" data-name="Group 9">
+            <line id="Line_6" data-name="Line 6" x2="19" transform="translate(-0.072 0.829)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+            <line id="Line_7" data-name="Line 7" x2="19" transform="translate(-0.072 8.829)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+            <line id="Line_8" data-name="Line 8" x2="19" transform="translate(-0.072 16.829)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+          </g>
+        </g>
+        <path id="Path_40" data-name="Path 40" d="M70.774,141.834a3.193,3.193,0,1,1-3.193,3.193h0A3.193,3.193,0,0,1,70.774,141.834Z" transform="translate(-0.168 -3.225)" fill="#fa4300" stroke="#000" stroke-width="1"/>
+        <path id="Path_41" data-name="Path 41" d="M75.475,145.559a3.166,3.166,0,1,1-3.166,3.166h0A3.166,3.166,0,0,1,75.475,145.559Z" transform="translate(2.484 0.887)" fill="#68ca44" stroke="#000" stroke-width="1"/>
+        <path id="Path_42" data-name="Path 42" d="M70.773,149.273a3.191,3.191,0,1,1-3.191,3.192h0A3.192,3.192,0,0,1,70.773,149.273Z" transform="translate(-0.165 4.922)" fill="#6499f3" stroke="#000" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

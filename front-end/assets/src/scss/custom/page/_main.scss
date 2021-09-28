@@ -1,4 +1,23 @@
 
 .main{
   padding: 50px 0;
+  $mainclassname: &;
+
+  &-wrapper{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+
+    #{$mainclassname}-sidebar{
+      @include flexbox-flex(0 0 auto);
+      width: auto;
+      margin-right: $grid-gutter-width;
+    }
+
+    #{$mainclassname}-article{
+      @include flexbox-flex(1 0 0%);
+      width: 100%;
+    }
+
+  }
+
 }
