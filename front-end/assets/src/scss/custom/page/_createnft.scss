@@ -38,6 +38,7 @@
         }
 
         .uploadarea{
+          height: 100%;
           padding: 15px;
           border: 1px solid $gray-400;
           @include border-radius($border-radius);

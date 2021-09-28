@@ -29,11 +29,13 @@
     @include flexbox-align-items(center);
 
     &-input{
-      @include flexbox-flex(1 0 0%);
+      @include flexbox-flex(0 0 auto);
+      width: auto;
     }
 
     &-info{
       @include flexbox-flex(1 0 0%);
+      width: 100%;
       padding-left: $grid-gutter-width * 0.5;
     }
 
@@ -46,6 +48,7 @@
       appearance: none; // Fix appearance for date inputs in Safari
 
       .form-control{
+        min-width: 100px;
         min-height: auto;
         padding: 0 $input-padding-y;
         margin: 0 $input-padding-x !important;

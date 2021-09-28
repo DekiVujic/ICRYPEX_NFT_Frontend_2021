@@ -6,9 +6,10 @@
   background-color: $input-bg;
   min-height: inherit;
   padding: $input-padding-y*2;
-  border: $input-border-width dashed $blue;
+  border: $input-border-width solid $input-border-color;
   @include border-radius($input-border-radius);
   @include transition-multiple(background 0.3s ease-in-out, border 0.3s ease-in-out);
+  overflow: hidden;
 
   &.dz-drag-hover{
     background-color: $input-disabled-bg;
@@ -29,12 +30,32 @@
       @include flexbox-justify-content(center);
       height: 100%;
       margin: 0;
+      position: relative;
 
-      &-icon,
-      &-btxt,
-      &-stxt{
-        display: block;
-        text-align: center;
+
+      .dz-button{
+        color: $site-font-clr-pri;
+        background-color: $cyan;
+        text-indent: -9999px;
+        width: 58px;
+        height: 58px;
+        @include border-radius($border-radius-pill);
+        position: relative;
+
+        &::before{
+          content: "";
+          width: 28px;
+          height: 28px;
+          background-color: transparent;
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDI4IDI4Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTUgLTE1KSI+PHJlY3Qgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNSAxNSkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAiLz48cGF0aCBkPSJNMjMuNTA4LDEwLjUwN0gxNS40OTJWMi40OTJhMi40OTIsMi40OTIsMCwxLDAtNC45ODUsMHY4LjAxNUgyLjQ5MmEyLjQ5MiwyLjQ5MiwwLDEsMCwwLDQuOTg1aDguMDE1djguMDE2YTIuNDkyLDIuNDkyLDAsMSwwLDQuOTg1LDBWMTUuNDkyaDguMDE2YTIuNDkyLDIuNDkyLDAsMSwwLDAtNC45ODVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNiAxNikiIGZpbGw9IiMwMzdkYjAiLz48L2c+PC9zdmc+");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform-multiple(translate(-50%, -50%) scale(1));
+        }
       }
 
       &-icon{
@@ -89,11 +110,12 @@
 
         > img{
           width: 100%;
-          max-width: 100%;
-          height: auto;
+          max-width: inherit;
+          height: 100%;
           @include border-radius($input-border-radius);
-          @include scale(1.02);
+          @include scale(1);
           @include transition-multiple(filter 0.3s ease-in-out, transform 0.3s ease-in-out);
+          @include object-fit(cover, center);
         }
       }
 
@@ -179,5 +201,18 @@
         }
       }
     }
+  }
+
+  &-lg{
+
+    .dz-message .dz-button{
+      width: 116px;
+      height: 116px;
+
+      &::before{
+        @include transform-multiple(translate(-50%, -50%) scale(2));
+      }
+    }
+
   }
 }
