@@ -8,6 +8,15 @@
     margin-bottom: $spacer;
   }
 
+  .form-switch{
+    margin-bottom: $spacer * 0.5;
+
+    .form-check-label{
+      color: $site-font-clr-pri;
+      font-family: $site-font-family-gilroy-semibold;
+    }
+  }
+
   .formfieldset{
 
     + .formfieldset{
@@ -23,6 +32,25 @@
       margin-bottom: 0;
     }
 
+  }
+
+  .labelflex{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+    @include flexbox-align-items(center);
+    @include flexbox-justify-content(space-between);
+
+    > *{
+      @include flexbox-flex(0 0 auto);
+      width: auto;
+    }
+
+    .form-select{
+      background-position: right center;
+      padding: 0 20px 0 0;
+      text-align: center;
+      border: none;
+    }
   }
 
   .form-floating{

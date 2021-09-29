@@ -10,14 +10,17 @@
     #{$mainclassname}-sidebar{
       @include flexbox-flex(0 0 auto);
       width: auto;
-      margin-right: $grid-gutter-width;
+      margin-right: $grid-gutter-width * 0.5;
     }
 
     #{$mainclassname}-article{
       @include flexbox-flex(1 0 0%);
       width: 100%;
     }
+  }
 
+  &-marketplace{
+    padding: $grid-gutter-width * 0.5 0;
   }
 
 }
