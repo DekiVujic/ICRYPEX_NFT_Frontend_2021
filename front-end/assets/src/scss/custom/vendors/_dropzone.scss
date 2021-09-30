@@ -1,0 +1,219 @@
+
+// (https://www.npmjs.com/package/dropzone/v/5.9.3)
+@import '~dropzone/dist/dropzone';
+
+.dropzone{
+  background-color: $input-bg;
+  min-height: inherit;
+  //padding: $input-padding-y*2;
+  padding: 0;
+  border: $input-border-width solid $input-border-color;
+  @include border-radius($input-border-radius);
+  @include transition-multiple(background 0.3s ease-in-out, border 0.3s ease-in-out);
+  overflow: hidden;
+
+  &.dz-drag-hover{
+    background-color: $input-disabled-bg;
+    border-color: $orange;
+    border-style: dashed;
+
+    .dz-message{
+      opacity: 1;
+    }
+  }
+
+  .dz{
+
+    &-message{
+      @include flexbox-display-flex();
+      @include flexbox-flex-flow(column);
+      @include flexbox-align-items(center);
+      @include flexbox-justify-content(center);
+      height: 100%;
+      margin: 0;
+      position: relative;
+
+
+      .dz-button{
+        color: $site-font-clr-pri;
+        background-color: $cyan;
+        text-indent: -9999px;
+        width: 58px;
+        height: 58px;
+        @include border-radius($border-radius-pill);
+        position: relative;
+
+        &::before{
+          content: "";
+          width: 28px;
+          height: 28px;
+          background-color: transparent;
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDI4IDI4Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTUgLTE1KSI+PHJlY3Qgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNSAxNSkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAiLz48cGF0aCBkPSJNMjMuNTA4LDEwLjUwN0gxNS40OTJWMi40OTJhMi40OTIsMi40OTIsMCwxLDAtNC45ODUsMHY4LjAxNUgyLjQ5MmEyLjQ5MiwyLjQ5MiwwLDEsMCwwLDQuOTg1aDguMDE1djguMDE2YTIuNDkyLDIuNDkyLDAsMSwwLDQuOTg1LDBWMTUuNDkyaDguMDE2YTIuNDkyLDIuNDkyLDAsMSwwLDAtNC45ODVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNiAxNikiIGZpbGw9IiMwMzdkYjAiLz48L2c+PC9zdmc+");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform-multiple(translate(-50%, -50%) scale(1));
+        }
+      }
+
+      &-icon{
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIzNCIgdmlld0JveD0iMCAwIDI2IDM0Ij4NCiAgPGcgaWQ9Ikljb25fRHJhZ19Ecm9wIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjUgMC41KSI+DQogICAgPHBhdGggaWQ9IlBhdGgiIGQ9Ik0yMy41LDMuNUg4LjVjLTEuNDgzLDAtMiwuNTE3LTIsMnYyOWMwLDEuNDgzLjUxNywyLDIsMmgyMGMxLjQ4MywwLDMtLjUxNywzLTJ2LTIyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuNSAtMy41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjg3Y2EyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMSIvPg0KICAgIDxwYXRoIGlkPSJQYXRoLTIiIGRhdGEtbmFtZT0iUGF0aCIgZD0iTTE4LjgsMy40djcuNjU3QTEuMzMsMS4zMywwLDAsMCwyMC4xMTEsMTIuNEgyNi44IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMS44IC0zLjQpIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ODdjYTIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogICAgPHBhdGggaWQ9IlBhdGgtMyIgZGF0YS1uYW1lPSJQYXRoIiBkPSJNMTIuNiwxMC44Mjd2OC41MWMwLC41MjUuNDI0LjQyLjUzLjQybDIuMTIxLS45NDYsMS4zNzksMy4wNDdhLjY3MS42NzEsMCwwLDAsLjk1NS4zMTVsLjYzNi0uMzE1YS42MzcuNjM3LDAsMCwwLC40MjQtLjk0NmwtMS4zNzktMy4wNDcsMi4xMjEtLjk0NmMuMTA2LS4xMDUuMjEyLS4yMS4yMTItLjMxNSwwLS4yMSwwLS4zMTUtLjEwNi0uNDJMMTMuMTMsMTAuNDA3Yy0uMTA2LS4xMDUtLjMxOC0uMjEtLjQyNC0uMTA1UzEyLjYsMTAuNTEyLDEyLjYsMTAuODI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuNTk5IDAuNzQxKSIgZmlsbD0iIzY4N2NhMiIvPg0KICA8L2c+DQo8L3N2Zz4NCg==");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 35px;
+        margin-bottom: 5px;
+      }
+
+      &-btxt{
+        @include font-size($font-size-base);
+      }
+
+      &-stxt{
+        @include font-size($font-size-base);
+      }
+    }
+
+    &-preview{
+      @include flexbox-display-flex();
+      @include flexbox-flex-flow(column);
+      @include flexbox-align-items(center);
+      @include flexbox-justify-content(center);
+      height: 100%;
+      min-height: auto;
+      margin: 0;
+
+      &.dz-image-preview{
+        background-color: $input-disabled-bg;
+        @include border-radius($input-border-radius);
+      }
+
+      &.dz-file-preview{
+        .dz-image{
+          background: $input-disabled-bg;
+          @include border-radius($input-border-radius);
+        }
+      }
+
+      .dz-image{
+        @include flexbox-display-flex();
+        @include flexbox-flex-flow(column);
+        @include flexbox-align-items(center);
+        @include flexbox-justify-content(center);
+        width: 100%;
+        height: 100%;
+        @include border-radius($input-border-radius);
+
+        > img{
+          width: 100%;
+          max-width: inherit;
+          height: 100%;
+          @include border-radius($input-border-radius);
+          @include scale(1);
+          @include transition-multiple(filter 0.3s ease-in-out, transform 0.3s ease-in-out);
+          @include object-fit(cover, center);
+        }
+      }
+
+      .dz-details{
+        @include flexbox-display-flex();
+        @include flexbox-flex-flow(column);
+        @include flexbox-align-items(center);
+        @include flexbox-justify-content(space-between);
+        height: 100%;
+        @include font-size($font-size-base);
+        padding: $input-padding-y;
+
+        .dz-filename,
+        .dz-size{
+          width: 100%;
+
+          span{
+            color: $site-font-clr-sec;
+            background-color: transparentize($green, 0.3);
+            padding: 0 5px 1px;
+            @include border-radius($border-radius-sm);
+          }
+        }
+
+        .dz-size{
+          @include font-size($font-size-base);
+        }
+
+        .dz-filename:hover span{
+          background-color: transparentize($green, 0.1);
+          border-color: $green;
+        }
+      }
+
+      .dz-progress{
+        background-color: $gray-400;
+        height: 8px;
+        margin-top: -4px;
+
+        .dz-upload{
+          @include background-linear(lighten($site-clr-green, 15%), $site-clr-green, 0);
+        }
+      }
+
+      .dz-success-mark svg,
+      .dz-error-mark svg{
+        background-color: transparentize($white, 0.3);
+        @include box-shadow(0px 0px 0px 8px transparentize($white, 0.3));
+        @include border-radius(50%);
+        @include scale(0.6);
+      }
+
+      .dz-success-mark svg path{
+        stroke: $green;
+        stroke-opacity: 1;
+        fill: transparentize($green, 0.15);
+        fill-opacity: 1;
+      }
+
+      .dz-error-mark svg g{
+        stroke: $red;
+        stroke-opacity: 1;
+        fill: transparentize($red, 0.15);
+        fill-opacity: 1;
+      }
+
+      .dz-error-message{
+        color: $site-font-clr-sec;
+        @include background-linear($red, lighten($red, 5%));
+        @include font-size($font-size-base);
+        padding: $input-padding-y;
+        @include border-radius($border-radius-sm);
+
+        &::after{
+          border-bottom-color: lighten($red, 5%);
+        }
+      }
+
+      &:hover{
+        .dz-image img{
+          @include filter-multiple(blur(1px));
+          @include scale(1.2);
+        }
+      }
+    }
+  }
+
+  &-lg{
+
+    .dz-message .dz-button{
+      width: 116px;
+      height: 116px;
+
+      &::before{
+        @include transform-multiple(translate(-50%, -50%) scale(2));
+      }
+    }
+
+  }
+}

@@ -1,17 +1,17 @@
+@include BootstrapMinWidthResponsive(lg){
+  html{height: 100%;}
+  body, #root{
+    @include flexbox-display-flex();
+    @include flexbox-flex-flow(column);
+    min-height: 100vh;
 
-html{height: 100%;}
-body, #root{
-  @include flexbox-display-flex();
-  @include flexbox-flex-flow(column);
-  height: 100%;
-
-  @include windowfsfullscreen{}
-
-  @include windowfsbackdrop{}
-
+    header, footer, section{@include flexbox-flex(0);}
+    main{@include flexbox-flex(1);}
+  }
 }
 
 .textoverflowellipsis{
+  display: block;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

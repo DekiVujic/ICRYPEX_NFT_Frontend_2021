@@ -1,0 +1,37 @@
+body.homepage{
+
+  .header{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: $zindex-fixed;
+    top: 0;
+    left: 0;
+
+    &-web{
+
+      .header-logo{
+        .headlogo-text-clr01{fill: #FFFFFF;}
+      }
+
+      .header-nav{
+        &.headnavigation{
+          .navbar{
+            .nav-link{
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .header-lang{
+        .btn{
+          @include button-outline-variant($white, $gray-700);
+          color: $white;
+        }
+      }
+
+    }
+  }
+
+}

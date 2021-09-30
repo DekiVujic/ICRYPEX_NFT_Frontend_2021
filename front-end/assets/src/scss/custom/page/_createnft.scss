@@ -1,0 +1,115 @@
+
+.createnftarea{
+  //padding: 30px 0;
+  $createnftarea: &;
+
+  &-box{
+    background-color: $white;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    @include border-radius($border-radius-lg);
+
+    @include BootstrapMaxWidthResponsive(1k){
+      max-width: 800px;
+    }
+
+    #{$createnftarea}-boxtitle{}
+
+    #{$createnftarea}-form{
+      padding-top: 20px;
+
+      .createnftform{
+
+        &-top{
+          @include flexbox-display-flex();
+          @include flexbox-flex-wrap(wrap);
+
+          &-left{
+            @include flexbox-flex(0 0 auto);
+            width: 280px;
+
+            .uploadarea{
+              height: 100%;
+              padding: 15px;
+              border: 1px solid $gray-400;
+              @include border-radius($border-radius);
+
+              .dropzone{
+                height: 250px;
+                min-height: initial;
+              }
+
+              .sitecontent{
+                padding-top: 20px;
+              }
+            }
+          }
+
+          &-right{
+            @include flexbox-flex(1 0 0%);
+            padding-left: 20px;
+          }
+        }
+
+        &-bottom{
+          padding-top: 20px;
+
+          .uploaddocuments{
+
+            &-wrp{
+              @include flexbox-display-flex();
+              @include flexbox-flex-wrap(wrap);
+              margin-right: -$grid-gutter-width * 0.125;
+              margin-left: -$grid-gutter-width * 0.125;
+            }
+
+            &-colarea{
+              @include flexbox-flex(0 0 auto);
+              width: auto;
+              padding: $spacer * 0.5 $grid-gutter-width * 0.125 0;
+            }
+
+            .dropzone{
+              width: 125px;
+              height: 125px;
+            }
+          }
+
+          .categoryselect{
+
+            &-wrp{
+              @include flexbox-display-flex();
+              @include flexbox-flex-wrap(wrap);
+              margin-right: -$grid-gutter-width * 0.125;
+              margin-left: -$grid-gutter-width * 0.125;
+            }
+
+            &-colarea{
+              @include flexbox-flex(0 0 auto);
+              width: auto;
+              padding: $spacer * 0.5 $grid-gutter-width * 0.125 0;
+            }
+
+            .btn{
+              min-width: 90px;
+              font-family: $site-font-family-gilroy-regular;
+            }
+          }
+
+          .checkboxarea{}
+
+          .submitbtn{
+            .btn{
+              min-width: 280px;
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

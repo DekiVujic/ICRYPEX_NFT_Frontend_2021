@@ -1,0 +1,15 @@
+
+.headnavigation{
+
+  .navbar{
+
+    padding: 0;
+
+    .nav-link{
+      color: #243455;
+      font-family: $site-font-family-gilroy-semibold;
+      @include rfs(1rem);
+      //padding: 0 $navbar-nav-link-padding-x * 1.5;
+    }
+  }
+}
