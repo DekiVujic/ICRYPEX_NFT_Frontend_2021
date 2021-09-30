@@ -30,8 +30,8 @@ const init = (initialLang = "tr") => {
             onePager: 'One Pager',
             whitePager: 'White Paper',
             forYou: 'For You',
-            alreadyHaveAnAccount : 'Already have an account',
-            oneAccountTwoPlatforms :'One Account Two Platforms',
+            alreadyHaveAnAccount: 'Already have an account',
+            oneAccountTwoPlatforms: 'One Account Two Platforms',
             login: {
               notARobot: "I am not a robot",
               enterCode: "Enter Verification Code",
@@ -56,7 +56,7 @@ const init = (initialLang = "tr") => {
               resetPassword: "Reset My Password",
               hasResetPassword: "Your Password Has Been Reset",
               sentNewPassword: "Your new password has been sent via SMS.",
-              dontHaveAnAccountYet :'Don’t have an account yet?',
+              dontHaveAnAccountYet: 'Don’t have an account yet?',
             },
             form: {
               isRequired: "This field is required",
@@ -71,7 +71,8 @@ const init = (initialLang = "tr") => {
           menu: {
             marketplace: 'Marketplace',
             myNfts: "My NFT's",
-            helpCenter: 'Help Center'
+            helpCenter: 'Help Center',
+            accountActivities: 'Account Activities'
           }
         },
         tr: {
@@ -96,8 +97,8 @@ const init = (initialLang = "tr") => {
             onePager: 'One Pager',
             whitePager: 'White Paper',
             forYou: 'For You',
-            alreadyHaveAnAccount : 'Zaten hesabınız var mı',
-            oneAccountTwoPlatforms :'Bir Hesap İki Platform'
+            alreadyHaveAnAccount: 'Zaten hesabınız var mı',
+            oneAccountTwoPlatforms: 'Bir Hesap İki Platform'
           },
           login: {
             notARobot: "Ben robot değilim",
@@ -123,7 +124,7 @@ const init = (initialLang = "tr") => {
             resetPassword: "Şifremi Sıfırla",
             hasResetPassword: "Parolanız Sıfırlanmıştır.",
             sentNewPassword: "Yeni parolanız SMS olarak gönderilmiştir.",
-            dontHaveAnAccountYet :'Henüz bir hesabınız yok mu?',
+            dontHaveAnAccountYet: 'Henüz bir hesabınız yok mu?',
           },
           form: {
             isRequired: "Bu alanı doldurmalısınız",
@@ -136,7 +137,8 @@ const init = (initialLang = "tr") => {
           menu: {
             marketplace: 'Marketplace',
             myNfts: "My NFT's",
-            helpCenter: 'Help Center'
+            helpCenter: 'Help Center',
+            accountActivities: 'Hesap Hareketleri'
           }
         },
       },

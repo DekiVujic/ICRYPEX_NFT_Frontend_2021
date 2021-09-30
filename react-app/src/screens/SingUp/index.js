@@ -57,7 +57,6 @@ const SignUp = () => {
                                                 <Row className="justify-content-center">
                                                     <Col>
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-
                                                     </Col>
                                                 </Row>
                                                 <Row className="justify-content-center">
@@ -96,7 +95,7 @@ const SignUp = () => {
                                                 name="surname"
                                                 placeholder={t("login:surname")}
                                                 aria-invalid={errors.surname ? "true" : "false"}
-                                                {...register('firstname', { required: true })} />
+                                                {...register('surname', { required: true })} />
                                             {errors.surname && (
                                                 <Form.Text className="text-muted">
                                                     {t("form:isRequired")}

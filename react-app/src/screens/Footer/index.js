@@ -1,6 +1,6 @@
 import { Col, Container, FormControl, InputGroup, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import { dictAboutUs, dictFaq, dictSignIn } from "../../constants";
+import { dictAboutUs, dictFaq } from "../../constants";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
