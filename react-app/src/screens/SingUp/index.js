@@ -30,14 +30,13 @@ const SignUp = () => {
         },
     });
 
-    const callRegisterApi = () => {
-        let name="test1";
-        let surname="test2";
-        let email="test@test.com";
-        let phone="5556667788";
-        let password="aaa"
-        
-        registerApi({name,surname,email,phone,password})
+    const callRegisterApi = (req) => {
+        registerApi({
+            name : req.data.firstname,
+            surname: req.data.surname,
+            email : req.data.email,
+            phone : req.data.phonenumber,
+            password:password})
             .then(res => {
                 console.log(res);
             });
@@ -45,10 +44,10 @@ const SignUp = () => {
 
     const onSubmit = data => {
         clearErrors();
-        console.log("onSubmit")
+        console.log("onSubmit");
         //TODO
         // call rest api
-        callRegisterApi();
+        callRegisterApi({data});
     };
 
     return (
