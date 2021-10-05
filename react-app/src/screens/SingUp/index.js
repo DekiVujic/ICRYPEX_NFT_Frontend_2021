@@ -6,13 +6,15 @@ import icrypexNft from "../../assets/img/content/login_form_logo_icrypex.svg";
 import { dictSignIn } from "../../constants";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { registerApi } from "../../api";
+import { registerApi, getCountryCodesApi} from "../../api";
 
 
 const SignUp = () => {
     const { t } = useTranslation(["common", "login"]);
     const { lang } = useSelector(state => state.ui);
     const [password, setPassword] = useState('');
+    const [countryCodesData, setCountryCodesData] = useState([]);
+
     const {
         register,
         handleSubmit,
@@ -30,17 +32,30 @@ const SignUp = () => {
         },
     });
 
+    useEffect(() => {
+        callCountryCodesApi();
+    }, []);
+
+    const callCountryCodesApi = () => {
+        getCountryCodesApi(true
+        ).then(res => {
+            setCountryCodesData(res.data);            
+        });
+    };
+     
+
     const callRegisterApi = (req) => {
+        const values = req.data;
         registerApi({
-            name : req.data.firstname,
-            surname: req.data.surname,
-            email : req.data.email,
-            phone : req.data.phonenumber,
-            password:password})
+            name : values.firstname,
+            surname: values.surname,
+            email : values.email,
+            phone : values.phonearea + values.phonenumber,
+            password : password})
             .then(res => {
                 console.log(res);
             });
-    }
+    };
 
     const onSubmit = data => {
         clearErrors();
@@ -62,8 +77,7 @@ const SignUp = () => {
                                 </Col>
                             </Row>
                             <Row className="loginarea-darkinfo sitecontent sitecontent-title sitecontent-center">
-                                    <h4>{t("common:alreadyHaveAnAccount")}</h4><a href={dictSignIn[lang]}>{t("common:signIn")}</a>
-                               
+                                    <h4>{t("common:alreadyHaveAnAccount")}</h4><a href={dictSignIn[lang]}>{t("common:signIn")}</a>                               
                             </Row>
                             <Row className="justify-content-center">
                                 <Col>
@@ -143,10 +157,9 @@ const SignUp = () => {
                                                 <Form.Group className="phonearea" controlId="formBasicEmail">
                                                     <Form.Floating controlId="floatingSelect" >
                                                         <Form.Select name="phonearea" aria-label="Floating label select example">
-                                                            <option>+90</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            {countryCodesData.map((val, index) => {
+                                                                return <option key={val.country_code}>{val.country_code}</option>
+                                                            })}
                                                         </Form.Select>
                                                         <Form.Label>{t("login:phone")}</Form.Label>
                                                         {errors.phonearea && (
