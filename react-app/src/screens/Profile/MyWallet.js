@@ -3,7 +3,7 @@ import {Button, Card, Col, Container, Image, Row, Tab, Tabs} from "react-bootstr
 import avax_icon from "../../assets/image/avax_icon.svg";
  
 
-const CryptoAsset = props => {
+const MyWallet = props => {
     return (
         <Container>
             <Row>
@@ -75,4 +75,4 @@ const CryptoAsset = props => {
     )
 }
 
-export default CryptoAsset
+export default MyWallet

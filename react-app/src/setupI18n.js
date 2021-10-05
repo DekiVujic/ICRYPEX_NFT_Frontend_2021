@@ -30,8 +30,8 @@ const init = (initialLang = "tr") => {
             onePager: 'One Pager',
             whitePager: 'White Paper',
             forYou: 'For You',
-            alreadyHaveAnAccount : 'Already have an account',
-            oneAccountTwoPlatforms :'One Account Two Platforms',
+            alreadyHaveAnAccount: 'Already have an account?',
+            oneAccountTwoPlatforms: 'One Account Two Platforms',
             login: {
               notARobot: "I am not a robot",
               enterCode: "Enter Verification Code",
@@ -52,11 +52,13 @@ const init = (initialLang = "tr") => {
               readAndAgree: "read and agree",
               readAndAgreeClick: "By clicking Sign Up, I hereby acknowledge that I agree to the ICRYPEX NFT Terms and Conditions and I’ve read the Privacy Notice.",
               readAndAgreeCapital: "Read and Agree",
+              readAndAgreeNews: "I want to receive news from commercial advertisements and announcements.",
               sendAgain: "Send Again",
               resetPassword: "Reset My Password",
               hasResetPassword: "Your Password Has Been Reset",
               sentNewPassword: "Your new password has been sent via SMS.",
-              dontHaveAnAccountYet :'Don’t have an account yet?',
+              dontHaveAnAccountYet: 'Don’t have an account yet?',
+              userName:'User Name',
             },
             form: {
               isRequired: "This field is required",
@@ -71,7 +73,8 @@ const init = (initialLang = "tr") => {
           menu: {
             marketplace: 'Marketplace',
             myNfts: "My NFT's",
-            helpCenter: 'Help Center'
+            helpCenter: 'Help Center',
+            accountActivities: 'Account Activities'
           }
         },
         tr: {
@@ -96,8 +99,8 @@ const init = (initialLang = "tr") => {
             onePager: 'One Pager',
             whitePager: 'White Paper',
             forYou: 'For You',
-            alreadyHaveAnAccount : 'Zaten hesabınız var mı',
-            oneAccountTwoPlatforms :'Bir Hesap İki Platform'
+            alreadyHaveAnAccount: 'Zaten hesabınız var mı?',
+            oneAccountTwoPlatforms: 'Bir Hesap İki Platform'
           },
           login: {
             notARobot: "Ben robot değilim",
@@ -118,12 +121,14 @@ const init = (initialLang = "tr") => {
             termsOfService: "Kullanım sözleşmesini",
             readAndAgree: "okudum ve onaylıyorum",
             readAndAgreeCapital: "Okudum ve Onaylıyorum",
+            readAndAgreeNews: "Ticari reklam ve duyurulardan haber almak istiyorum",
             readAndAgreeClick: "Kaydol'a tıklayarak, ICRYPEX NFT Hüküm ve Koşullarını kabul ettiğimi ve Gizlilik Bildirimini okuduğumu onaylıyorum.",
             sendAgain: "Tekrar Gönder",
             resetPassword: "Şifremi Sıfırla",
             hasResetPassword: "Parolanız Sıfırlanmıştır.",
             sentNewPassword: "Yeni parolanız SMS olarak gönderilmiştir.",
-            dontHaveAnAccountYet :'Henüz bir hesabınız yok mu?',
+            dontHaveAnAccountYet: 'Henüz bir hesabınız yok mu?',
+            userName:'Kullanıcı Adınız',
           },
           form: {
             isRequired: "Bu alanı doldurmalısınız",
@@ -136,7 +141,8 @@ const init = (initialLang = "tr") => {
           menu: {
             marketplace: 'Marketplace',
             myNfts: "My NFT's",
-            helpCenter: 'Help Center'
+            helpCenter: 'Help Center',
+            accountActivities: 'Hesap Hareketleri'
           }
         },
       },

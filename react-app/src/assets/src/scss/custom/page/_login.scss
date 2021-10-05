@@ -1,0 +1,110 @@
+
+.loginarea{
+  //padding: 30px 0;
+  $loginarea: &;
+
+  &-box{
+    background-color: $white;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    @include border-radius($border-radius-lg);
+
+    @include BootstrapMaxWidthResponsive(1k){
+      max-width: 500px;
+    }
+
+    #{$loginarea}-headtitle{
+      margin: 10px 0 20px;
+
+      *{margin: 0;}
+    }
+
+    #{$loginarea}-darkinfo{
+      color: $white;
+      background-color: $site-clr-blue-dark;
+      padding: 20px;
+      margin-bottom: 20px;
+      @include border-radius($border-radius);
+
+      *{color: $white;}
+
+      .logoarea{
+        @include flexbox-display-flex();
+        @include flexbox-align-items(center);
+        @include flexbox-justify-content(center);
+        padding-top: 15px;
+
+        &-item{
+          padding: 5px 15px;
+          position: relative;
+          display: block;
+
+          &::before{
+            content: "";
+            background-color: $gray-400;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+
+          &:first-child::before{display: none;}
+        }
+
+      }
+    }
+
+    #{$loginarea}-form{
+
+      .form-floating{
+
+        &.showhidepass{
+          position: relative;
+
+          .form-control{
+            padding-right: 60px;
+          }
+
+          .showhidebtn{
+            all: unset;
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            @include translateY(-50%);
+          }
+        }
+      }
+
+      .phonearea{
+        .input-group-append{
+          padding-right: $spacer;
+        }
+      }
+
+      .form-check label{
+        @include font-size(0.875rem);
+      }
+    }
+
+    &.signup{
+      form .submitbtn{margin-bottom: 0;}
+    }
+
+    &.signin{
+      .loginarea-form{
+        border-top: 1px solid $blue;
+        padding-top: 20px;
+      }
+    }
+
+  }
+
+
+}

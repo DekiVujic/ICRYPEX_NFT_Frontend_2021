@@ -1,0 +1,137 @@
+
+.siteform{
+  $siteform: &;
+
+  .form{}
+
+  .form-group{
+    margin-bottom: $spacer;
+  }
+
+  .form-switch{
+    margin-bottom: $spacer * 0.5;
+
+    .form-check-label{
+      color: $site-font-clr-pri;
+      font-family: $site-font-family-gilroy-semibold;
+    }
+  }
+
+  .formfieldset{
+
+    + .formfieldset{
+      padding-top: 30px;
+    }
+
+    legend{
+      color: $site-font-clr-pri;
+      font-family: $site-font-family-gilroy-semibold;
+    }
+
+    > *:last-child{
+      margin-bottom: 0;
+    }
+
+  }
+
+  .labelflex{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+    @include flexbox-align-items(center);
+    @include flexbox-justify-content(space-between);
+
+    > *{
+      @include flexbox-flex(0 0 auto);
+      width: auto;
+    }
+
+    .form-select{
+      background-position: right center;
+      padding: 0 20px 0 0;
+      text-align: center;
+      border: none;
+    }
+  }
+
+  .form-floating{
+
+    > label{
+      top: 2px;
+    }
+  }
+
+  textarea.form-control{
+    min-height: 100px;
+  }
+
+  .setspinner{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+    @include flexbox-align-items(center);
+
+    &-input{
+      @include flexbox-flex(0 0 auto);
+      width: auto;
+    }
+
+    &-info{
+      @include flexbox-flex(1 0 0%);
+      width: 100%;
+      padding-left: $grid-gutter-width * 0.5;
+    }
+
+    .input-group{
+      background-color: $input-bg;
+      background-clip: padding-box;
+      padding: $input-padding-y;
+      border: $input-border-width solid $input-border-color;
+      @include border-radius($input-border-radius);
+      appearance: none; // Fix appearance for date inputs in Safari
+
+      .form-control{
+        min-width: 100px;
+        min-height: auto;
+        padding: 0 $input-padding-y;
+        margin: 0 $input-padding-x !important;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+      }
+    }
+  }
+
+  .recaptcha{
+    padding-left: 0;
+
+    &-area{
+      @include flexbox-display-flex();
+      @include flexbox-align-items(center);
+    }
+
+    &-check{
+      position:relative;
+      width: $form-check-input-width;
+      height: $form-check-input-width;
+      overflow: hidden;
+      margin-right: 9px;
+      border: $form-check-input-border;
+      @include border-radius($form-check-input-border-radius);
+
+      .g-recaptcha{
+        position:absolute;
+        top: -27px;
+        left: -23px;
+        @include scale(0.95);
+      }
+    }
+
+    label{
+      font-weight: $font-weight-normal;
+      margin: 0;
+
+      &::before,
+      &::after{display: none;}
+    }
+  }
+
+}
