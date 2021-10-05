@@ -6,6 +6,7 @@
 - [Sign_In](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_In.html)
 - [Marketplace](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Marketplace.html)
 - [Create_NFT](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Create_NFT.html)
+- [Create_NFT_Result_Success](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Create_NFT_Result_Success.html)
    
 
 # NodeJS Kurulumu
