@@ -75,13 +75,116 @@
       &#{$iconclassname}-collection{background-position: calc(-20px*2) 0;}
       &#{$iconclassname}-colpassive{background-position: calc(-20px*2) 0;}
       &#{$iconclassname}-colactive{background-position: calc(-20px*3) 0;}
+      &#{$iconclassname}-view{background-position: calc(-20px*4) 0;}
+    }
+
+    &#{$iconclassname}-24{
+      width: 24px;
+      height: 24px;
+
+      &#{$iconclassname}-edit{background-position: calc(-24px*0) -20px;}
+      &#{$iconclassname}-list{background-position: calc(-24px*1) -20px;}
     }
 
     &#{$iconclassname}-30{
       width: 30px;
       height: 30px;
 
-      &#{$iconclassname}-filter{background-position: calc(-30px*0) -20px;}
+      &#{$iconclassname}-filter{background-position: calc(-30px*0) -44px;}
+    }
+  }
+
+  &-sprtsmcurrency{
+    background-image: url(#{$path-img-url-icons}/icons_spite_16_currencysmallicon.svg#{$cache-busting});
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    position: relative;
+
+    &#{$iconclassname}-16{
+      width: 16px;
+      height: 16px;
+
+      &#{$iconclassname}-try{
+        background-color: $site-clr-curr-try;
+        background-position: calc(-16px*0) 0;
+      }
+      &#{$iconclassname}-usd{
+        background-color: $site-clr-curr-usd;
+        background-position: calc(-16px*1) 0;
+      }
+      &#{$iconclassname}-eur{
+        background-color: $site-clr-curr-eur;
+        background-position: calc(-16px*2) 0;
+      }
+      &#{$iconclassname}-tryb{
+        background-color: $site-clr-curr-tryb;
+        background-position: calc(-16px*3) 0;
+      }
+      &#{$iconclassname}-usdt{
+        background-color: $site-clr-curr-usdt;
+        background-position: calc(-16px*4) 0;
+      }
+      &#{$iconclassname}-btc{
+        background-color: $site-clr-curr-btc;
+        background-position: calc(-16px*5) 0;
+      }
+      &#{$iconclassname}-eth{
+        background-color: $site-clr-curr-eth;
+        background-position: calc(-16px*6) 0;
+      }
+      &#{$iconclassname}-xrp{
+        background-color: $site-clr-curr-xrp;
+        background-position: calc(-16px*7) 0;
+      }
+      &#{$iconclassname}-ltc{
+        background-color: $site-clr-curr-ltc;
+        background-position: calc(-16px*8) 0;
+      }
+      &#{$iconclassname}-xlm{
+        background-color: $site-clr-curr-xlm;
+        background-position: calc(-16px*9) 0;
+      }
+      &#{$iconclassname}-link{
+        background-color: $site-clr-curr-link;
+        background-position: calc(-16px*10) 0;
+      }
+      &#{$iconclassname}-dot{
+        background-color: $site-clr-curr-dot;
+        background-position: calc(-16px*11) 0;
+      }
+      &#{$iconclassname}-bat{
+        background-color: $site-clr-curr-bat;
+        background-position: calc(-16px*12) 0;
+      }
+      &#{$iconclassname}-algo{
+        background-color: $site-clr-curr-algo;
+        background-position: calc(-16px*13) 0;
+      }
+      &#{$iconclassname}-ftm{
+        background-color: $site-clr-curr-ftm;
+        background-position: calc(-16px*14) 0;
+      }
+      &#{$iconclassname}-avax{
+        background-color: $site-clr-curr-avax;
+        background-position: calc(-16px*15) 0;
+      }
+      &#{$iconclassname}-mpay{
+        background-color: $site-clr-curr-mpay;
+        background-position: calc(-16px*16) 0;
+      }
+      &#{$iconclassname}-hot{
+        background-color: $site-clr-curr-hot;
+        background-position: calc(-16px*17) 0;
+      }
+      &#{$iconclassname}-mkr{
+        background-color: $site-clr-curr-mkr;
+        background-position: calc(-16px*18) 0;
+      }
+      &#{$iconclassname}-aave{
+        background-color: $site-clr-curr-aave;
+        background-position: calc(-16px*19) 0;
+      }
     }
   }
 
@@ -96,13 +199,14 @@
       width: 24px;
       height: 24px;
 
-      &#{$iconclassname}-facebook{background-position: calc(-24px*0) 0;}
-      &#{$iconclassname}-twitter{background-position: calc(-24px*1) 0;}
-      &#{$iconclassname}-instagram{background-position: calc(-24px*2) 0;}
-      &#{$iconclassname}-youtube{background-position: calc(-24px*3) 0;}
-      &#{$iconclassname}-telegram{background-position: calc(-24px*4) 0;}
-      &#{$iconclassname}-medium{background-position: calc(-24px*5) 0;}
-      &#{$iconclassname}-linkedin{background-position: calc(-24px*6) 0;}
+      &#{$iconclassname}-share{background-position: calc(-24px*0) 0;}
+      &#{$iconclassname}-facebook{background-position: calc(-24px*1) 0;}
+      &#{$iconclassname}-twitter{background-position: calc(-24px*2) 0;}
+      &#{$iconclassname}-instagram{background-position: calc(-24px*3) 0;}
+      &#{$iconclassname}-youtube{background-position: calc(-24px*4) 0;}
+      &#{$iconclassname}-telegram{background-position: calc(-24px*5) 0;}
+      &#{$iconclassname}-medium{background-position: calc(-24px*6) 0;}
+      &#{$iconclassname}-linkedin{background-position: calc(-24px*7) 0;}
     }
   }
 }

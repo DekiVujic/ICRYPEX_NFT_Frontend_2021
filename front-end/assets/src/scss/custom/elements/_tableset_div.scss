@@ -1,0 +1,177 @@
+
+.sitetable{
+  color: $table-color;
+  background-color: $table-bg;
+  @include rfs($font-size-base);
+  line-height: 1;
+  width: 100%;
+  margin-bottom: $spacer;
+
+  .ttr{
+    @include transition-multiple(color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+  }
+
+  .tth,
+  .ttd{
+    padding: $table-cell-padding-y $table-cell-padding-x;
+    vertical-align: middle;
+    border-top: $table-border-width solid $table-border-color;
+    @include transition-multiple(color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+  }
+
+  .tth{
+    color: $site-font-clr-sec;
+    font-weight: $font-weight-bold;
+  }
+
+  .ttd{
+    color: $site-font-clr-pri;
+  }
+
+  &.tabletable{
+    @include BootstrapMinWidthResponsive(lg){
+      display: table;
+    }
+    @include BootstrapMaxWidthResponsive(lg){
+    }
+
+    .tthead,
+    .ttbody{
+      @include BootstrapMinWidthResponsive(lg){
+        display: table-row-group;
+        vertical-align: middle;
+      }
+    }
+
+    .ttr{
+      @include BootstrapMinWidthResponsive(lg){
+        display: table-row;
+      }
+      @include BootstrapMaxWidthResponsive(lg){
+        @include flexbox-display-flex();
+        @include flexbox-align-items(center);
+        @include flexbox-justify-content(space-between);
+      }
+    }
+
+    .tth,
+    .ttd{
+      @include BootstrapMinWidthResponsive(lg){
+        display: table-cell;
+      }
+      @include BootstrapMaxWidthResponsive(lg){
+      }
+    }
+  }
+
+  &.tablediv{
+
+    .tthead,
+    .ttbody{
+
+    }
+
+    .tthead{}
+    .ttbody{}
+
+    .ttr{
+      @include flexbox-display-flex();
+      @include flexbox-align-items(center);
+      @include flexbox-justify-content(space-between);
+    }
+
+    .tth,
+    .ttd{
+
+      &.fxd{
+        @include flexbox-flex-basis(0);
+        @include flexbox-flex-grow(1);
+        max-width: 100%;
+      }
+
+      &.aut{
+        @include flexbox-flex(0 0 auto);
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+
+  &.tablesm{
+    @include rfs($font-size-sm);
+
+    .tth,
+    .ttd{
+      padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
+    }
+  }
+
+  &.tbordered{
+    border: $table-border-width solid $table-border-color;
+
+    .tth,
+    .ttd{
+      border: $table-border-width solid $table-border-color;
+    }
+
+    thead{
+      .tth,
+      .ttd {
+        border-bottom-width: 2 * $table-border-width;
+      }
+    }
+  }
+
+  &.tborderless{
+    .tth,
+    .ttd{
+      border: 0;
+
+      &:first-child{padding-left: 0;}
+      &:last-child{padding-right: 0;}
+    }
+  }
+
+  &.tstriped{
+    .ttbody .ttr:nth-of-type(#{$table-striped-order}){
+      background-color: $table-accent-bg;
+    }
+  }
+
+  &.thovered{
+    .ttbody .ttr:hover{
+      color: $table-hover-color;
+      background-color: $table-hover-bg;
+    }
+  }
+
+  &.tstriped,
+  &.thovered{
+    .ttbody .ttr{
+      @include border-radius($border-radius-sm);
+    }
+  }
+
+  &.scrollbartable{
+    @include flexbox-display-flex();
+    @include flexbox-flex-flow(column);
+    height: 100%;
+
+    .scrollthead{
+      &[class*="active-y"]> .tthead{padding-left: 10px;}
+    }
+
+    .scrolltbody{
+      //height: 450px;
+      position: relative;
+      overflow: hidden;
+
+      &.ps> .tbl-tbody{padding-left: 10px;}
+
+      > .ps__rail-y .ps__thumb-y{min-height: 20px;}
+
+    }
+  }
+
+}

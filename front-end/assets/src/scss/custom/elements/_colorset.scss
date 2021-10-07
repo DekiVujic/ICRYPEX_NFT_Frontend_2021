@@ -11,7 +11,27 @@ $site-default-colors: map-merge(
                         "orange":           $site-clr-orange,
                         "yellow":           $site-clr-yellow,
                         "fontpri":          $site-font-clr-pri,
-                        "fontsec":          $site-font-clr-sec
+                        "fontsec":          $site-font-clr-sec,
+                        "try":              $site-clr-curr-try,
+                        "usd":              $site-clr-curr-usd,
+                        "eur":              $site-clr-curr-eur,
+                        "tryb":             $site-clr-curr-tryb,
+                        "usdt":             $site-clr-curr-usdt,
+                        "btc":              $site-clr-curr-btc,
+                        "eth":              $site-clr-curr-eth,
+                        "xrp":              $site-clr-curr-xrp,
+                        "ltc":              $site-clr-curr-ltc,
+                        "xlm":              $site-clr-curr-xlm,
+                        "link":             $site-clr-curr-link,
+                        "dot":              $site-clr-curr-dot,
+                        "bat":              $site-clr-curr-bat,
+                        "algo":             $site-clr-curr-algo,
+                        "ftm":              $site-clr-curr-ftm,
+                        "avax":             $site-clr-curr-avax,
+                        "mpay":             $site-clr-curr-mpay,
+                        "hot":              $site-clr-curr-hot,
+                        "mkr":              $site-clr-curr-mkr,
+                        "aave":             $site-clr-curr-aave
                 ),
                 $site-default-colors
 );
