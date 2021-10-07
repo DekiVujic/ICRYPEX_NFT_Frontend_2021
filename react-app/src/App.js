@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { pathFaq, pathForgotPassword, pathSignIn, pathSignUp, 
         pathAboutUs, pathProfile, pathMyWallet, pathAccActivities,
-        pathMyNfts, pathSettings } from "./routes";
+        pathMyNfts, pathSettings, pathCreateNft } from "./routes";
 import Header from "./screens/Header";
 import SignUp from "./screens/SingUp";
 import Home from "./screens/Home";
@@ -11,6 +11,7 @@ import SignIn from "./screens/SingIn";
 import Settings from "./screens/Settings"
 import ForgotPassword from "./screens/ForgotPassword";
 import Profile from './screens/Profile';
+import CreateNft from './screens/NftCreate'
 import Faq from "./screens/Faq";
 function App() {
     return (
@@ -55,6 +56,10 @@ function App() {
                 <Route exact path={[...pathSettings]}>
                     <Header />
                     <Profile />
+                </Route>
+                <Route exact path={[...pathCreateNft]}>
+                    <Header />
+                    <CreateNft />
                 </Route>
                 <Route path="/">
                     <Home />

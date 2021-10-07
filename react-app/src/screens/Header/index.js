@@ -2,7 +2,7 @@ import { Navbar, Nav, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { ReactComponent as ReactLogo } from '../../assets/image/logo.svg';
 import { useDispatch, useSelector } from "react-redux";
-import { dictSignIn, dictSignUp, dictProfile } from "../../constants";
+import { dictSignIn, dictSignUp,dictMyNfts, dictProfile } from "../../constants";
 import { getLocalePath } from "../../routes"
 import { setLanguage } from "../../state/slices/ui.slice";
 import { useCallback } from "react";
@@ -29,7 +29,7 @@ const Header = props => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="#features">{t("menu:marketplace")}</Nav.Link>
-                    <Nav.Link href="#pricing">{t("menu:myNfts")}</Nav.Link>
+                    <Nav.Link href={dictMyNfts[lang]}>{t("menu:myNfts")}</Nav.Link>
                     <Nav.Link href="#pricing">{t("menu:helpCenter")}</Nav.Link>
                     <Nav.Link href={dictProfile[lang]}>{t("menu:profile")}</Nav.Link>
                 </Nav>

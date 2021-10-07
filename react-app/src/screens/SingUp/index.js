@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import PasswordStrengthBar from 'react-password-strength-bar';
 import { useTranslation } from "react-i18next";
-import icrypexNft from "../../assets/img/content/login_form_logo_icrypex.svg";
 import { dictSignIn } from "../../constants";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -91,7 +90,6 @@ const SignUp = () => {
                                                 </Row>
                                                 <Row className="justify-content-center">
                                                     <Col>
-                                                        <icrypexNft/>
                                                     </Col>
                                                 </Row>
                                             </Container>

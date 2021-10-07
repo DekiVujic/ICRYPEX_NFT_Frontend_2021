@@ -1,6 +1,6 @@
 import { dictSignUp, dictSignIn, dictForgotPassword, 
     dictFaq, dictAboutUs, dictProfile, dictMyWallet,
-     dictAccActivities, dictMyNfts,dictSettings } from "./constants";
+     dictAccActivities, dictMyNfts,dictSettings, dictCreateNft } from "./constants";
 
 export const pathSignUp = Object.values(dictSignUp);
 export const pathSignIn = Object.values(dictSignIn);
@@ -12,7 +12,7 @@ export const pathProfile = Object.values(dictProfile);
 export const pathMyWallet = Object.values(dictMyWallet);
 export const pathAccActivities = Object.values(dictAccActivities);
 export const pathMyNfts = Object.values(dictMyNfts);
-
+export const pathCreateNft = Object.values(dictCreateNft);
 
 export const getLocalePath = (pathname, lang) => {
     if (pathSignUp.includes(pathname)) {
@@ -45,6 +45,8 @@ export const getLocalePath = (pathname, lang) => {
     if (pathSettings.includes(pathname)) {
         return dictSettings[lang];
     }
-
+    if (pathCreateNft.includes(pathname)) {
+        return dictCreateNft[lang];
+    }
     return false;
 };
