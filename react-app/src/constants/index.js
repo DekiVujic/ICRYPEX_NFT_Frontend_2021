@@ -41,3 +41,7 @@ export const dictSettings = {
     tr: "/profil/ayarlar",
     en: "/profile/settings"
 }
+export const dictCreateNft = {
+    tr: "/createNft",
+    en: "/createNft"
+}
