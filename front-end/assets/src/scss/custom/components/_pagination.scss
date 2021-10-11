@@ -1,6 +1,5 @@
 
 .sitepagination{
-
-
-
+  @include flexbox-display-flex();
+  @include flexbox-justify-content(center);
 }

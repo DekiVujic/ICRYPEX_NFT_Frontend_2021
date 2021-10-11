@@ -1,5 +1,5 @@
-<svg id="icons_spite_24_footer_social" xmlns="http://www.w3.org/2000/svg" width="168" height="24" viewBox="0 0 168 24">
-  <g id="Linkedin" transform="translate(143.999)">
+<svg id="icons_spite_24_footer_social" xmlns="http://www.w3.org/2000/svg" width="192" height="24" viewBox="0 0 192 24">
+  <g id="Linkedin" transform="translate(167.999)">
     <rect id="icon_bg" width="24" height="24" transform="translate(0.001)" fill="#62abff" opacity="0"/>
     <g id="Linkedin-2" data-name="Linkedin" transform="translate(4.667 4.665)">
       <rect id="Rectangle_1567" data-name="Rectangle 1567" width="3.324" height="9.503" transform="translate(0 4.751)" fill="#62abff"/>
@@ -7,28 +7,34 @@
       <path id="Path_9630" data-name="Path 9630" d="M72.769,57.208c-.224-1.79-1.12-2.918-3.54-2.918-1.718,0-2.4.268-2.8,1.018h0V54.29H63.74v9.5h2.77V58.816c0-1.242.236-2.18,1.77-2.18,1.514,0,1.634,1.154,1.634,2.26v4.895h2.852S72.821,57.626,72.769,57.208Z" transform="translate(-58.515 -49.537)" fill="#62abff"/>
     </g>
   </g>
-  <g id="Medium" transform="translate(112 -11)">
+  <g id="Medium" transform="translate(136 -11)">
     <rect id="icon_bg-2" data-name="icon_bg" width="24" height="24" transform="translate(8 11)" fill="#62abff" opacity="0"/>
     <path id="Medium_Logo" d="M12.883,3.793,14,2.732V2.5H10.13L7.372,9.313,4.234,2.5H.177v.232l1.3,1.559a.541.541,0,0,1,.177.453v6.127a.7.7,0,0,1-.188.608L0,13.248v.229H4.168v-.232L2.7,11.479a.717.717,0,0,1-.2-.608v-5.3L6.154,13.48h.425L9.725,5.572v6.3c0,.166,0,.2-.11.309L8.484,13.267V13.5h5.49v-.232l-1.091-1.06a.321.321,0,0,1-.125-.309V4.1a.32.32,0,0,1,.124-.309Z" transform="translate(13 15.5)" fill="#62abff"/>
   </g>
-  <g id="Telegram" transform="translate(88 -11)">
+  <g id="Telegram" transform="translate(112 -11)">
     <rect id="icon_bg-3" data-name="icon_bg" width="24" height="24" transform="translate(8 11)" fill="#62abff" opacity="0"/>
     <path id="Telegram_Logo" d="M6.278,10.567,6.013,14.2a.934.934,0,0,0,.739-.349L8.527,12.2l3.679,2.627c.675.367,1.15.174,1.332-.6L15.954,3.184h0c.214-.972-.361-1.353-1.018-1.114L.743,7.367C-.226,7.733-.211,8.26.578,8.5L4.207,9.6l8.429-5.142c.4-.256.757-.114.461.142Z" transform="translate(12 14.249)" fill="#62abff"/>
   </g>
-  <g id="Youtube" transform="translate(64 -11)">
+  <g id="Youtube" transform="translate(88 -11)">
     <rect id="icon_bg-4" data-name="icon_bg" width="24" height="24" transform="translate(8 11)" fill="#62abff" opacity="0"/>
     <path id="Youtube_Logo" d="M14184.63,10658.2a3.337,3.337,0,0,1-2.292-2.416,23.822,23.822,0,0,1,0-8,3.344,3.344,0,0,1,2.292-2.416,47.044,47.044,0,0,1,11.841,0,3.334,3.334,0,0,1,2.288,2.416,23.577,23.577,0,0,1,0,8,3.328,3.328,0,0,1-2.288,2.412,47.044,47.044,0,0,1-11.841,0Zm.409-11.385a1.844,1.844,0,0,0-1.251,1.332,23.123,23.123,0,0,0,0,7.277,1.844,1.844,0,0,0,1.251,1.332,48.009,48.009,0,0,0,11.022,0,1.832,1.832,0,0,0,1.247-1.332,22.818,22.818,0,0,0,0-7.277,1.832,1.832,0,0,0-1.247-1.332,48.009,48.009,0,0,0-11.022,0Zm3.745,2.326,4.4,2.641-4.4,2.647Z" transform="translate(-14170.5 -10628.75)" fill="#62abff"/>
   </g>
-  <g id="instagram" transform="translate(40 -11)">
+  <g id="instagram" transform="translate(64 -11)">
     <rect id="icon_bg-5" data-name="icon_bg" width="24" height="24" transform="translate(8 11)" fill="#62abff" opacity="0"/>
     <path id="instagram-2" data-name="instagram" d="M212.953,388.133h-7.994a2.3,2.3,0,0,0-2.3,2.284v7.927a2.3,2.3,0,0,0,2.3,2.3h7.994a2.306,2.306,0,0,0,2.321-2.3v-7.927a2.3,2.3,0,0,0-2.321-2.284Zm3.973,10.177h0a3.994,3.994,0,0,1-4.022,3.971h-7.9a4,4,0,0,1-4.022-3.971v-7.844a4,4,0,0,1,4.022-3.971h7.9a3.993,3.993,0,0,1,4.022,3.971Zm-7.962-6.3a2.383,2.383,0,1,0,2.4,2.383,2.394,2.394,0,0,0-2.4-2.383Zm0,6.5h0a4.12,4.12,0,1,1,4.156-4.12,4.139,4.139,0,0,1-4.156,4.12Zm4.29-7.4h0a.972.972,0,0,1-.985-.976.994.994,0,0,1,.985-.977,1,1,0,0,1,.985.977.982.982,0,0,1-.985.976Z" transform="translate(-188.986 -371.057)" fill="#62abff"/>
   </g>
-  <g id="twitter" transform="translate(20.001 -10)">
+  <g id="twitter" transform="translate(44.001 -10)">
     <rect id="icon_bg-6" data-name="icon_bg" width="24" height="24" transform="translate(3.999 10)" fill="#62abff" opacity="0"/>
     <path id="twitter-2" data-name="twitter" d="M-163,17.642c.006.137.009.274.009.413a9.02,9.02,0,0,1-9.081,9.082,9.028,9.028,0,0,1-4.892-1.434,6.426,6.426,0,0,0,.761.045,6.405,6.405,0,0,0,3.965-1.366,3.2,3.2,0,0,1-2.982-2.217,3.2,3.2,0,0,0,.6.057,3.183,3.183,0,0,0,.841-.112,3.194,3.194,0,0,1-2.561-3.13c0-.013,0-.027,0-.04a3.169,3.169,0,0,0,1.446.4,3.192,3.192,0,0,1-1.42-2.657,3.178,3.178,0,0,1,.432-1.6,9.061,9.061,0,0,0,6.579,3.335,3.187,3.187,0,0,1-.083-.727,3.192,3.192,0,0,1,3.192-3.192,3.188,3.188,0,0,1,2.33,1.008,6.389,6.389,0,0,0,2.027-.774,3.2,3.2,0,0,1-1.4,1.766,6.368,6.368,0,0,0,1.833-.5A6.474,6.474,0,0,1-163,17.642Z" transform="translate(185.961 1.372)" fill="#62abff"/>
   </g>
-  <g id="facebook" transform="translate(-6 -12)">
+  <g id="facebook" transform="translate(18 -12)">
     <rect id="icon_bg-7" data-name="icon_bg" width="24" height="24" transform="translate(6 12)" fill="#62abff" opacity="0"/>
     <path id="facebook-2" data-name="facebook" d="M23.157,11.7h-1.93a.731.731,0,0,0-.762.832v1.8h2.684l-.314,3.049h-2.37v8.683H16.874V17.379H15.166V14.327h1.708V12.352A3.367,3.367,0,0,1,20.5,8.729l2.66.011Z" transform="translate(-1.509 6.752)" fill="#62abff"/>
+  </g>
+  <g id="share" transform="translate(-0.001)">
+    <rect id="icon_bg-8" data-name="icon_bg" width="24" height="24" transform="translate(0.001)" fill="#62abff" opacity="0"/>
+    <g id="Share-2" data-name="Share" transform="translate(-17.999 -14.756)">
+      <path id="Path_135" data-name="Path 135" d="M34.451,18a3.027,3.027,0,0,0-2.94,3.813l-4.384,2.845a3.019,3.019,0,0,0-2.084-.847,3.044,3.044,0,1,0,0,6.087,3.02,3.02,0,0,0,2.1-.847l4.366,2.845a2.973,2.973,0,0,0-.1.769,3.044,3.044,0,1,0,3.044-3.044,3.019,3.019,0,0,0-2.084.847l-4.384-2.845a3.037,3.037,0,0,0,.1-.769,2.973,2.973,0,0,0-.1-.769L32.35,23.24a3.019,3.019,0,0,0,2.1.847,3.044,3.044,0,1,0,0-6.087Zm0,1.66a1.383,1.383,0,1,1-1.383,1.383A1.371,1.371,0,0,1,34.451,19.66Zm-9.407,5.81a1.383,1.383,0,1,1-1.383,1.383A1.371,1.371,0,0,1,25.044,25.471Zm9.407,5.81a1.383,1.383,0,1,1-1.383,1.383,1.371,1.371,0,0,1,1.383-1.383Z" fill="#62abff"/>
+    </g>
   </g>
 </svg>
