@@ -64,6 +64,14 @@
     min-height: 100px;
   }
 
+  .input-group{
+
+    .input-group-text.endtext{
+      border-left-width: 0;
+      position: relative;
+    }
+  }
+
   .setspinner{
     @include flexbox-display-flex();
     @include flexbox-flex-wrap(wrap);
