@@ -9,6 +9,7 @@
 - [Create_NFT](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Create_NFT.html)
 - [Create_NFT_Result_Success](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Create_NFT_Result_Success.html)
 - [Sell_NFT](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sell_NFT.html)
+- [Sell_NFT_Summary](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sell_NFT_Summary.html)
    
 
 # NodeJS Kurulumu

@@ -3,19 +3,23 @@
   //padding: 30px 0;
   $sellnftarea: &;
 
-  &-box{
+  &-box,
+  &-summary{
     background-color: $white;
-    width: 100%;
-    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     @include border-radius($border-radius-lg);
 
+    #{$sellnftarea}-boxtitle{}
+  }
+
+  &-box{
+    width: 100%;
+    max-width: 900px;
+
     @include BootstrapMaxWidthResponsive(1k){
       max-width: 800px;
     }
-
-    #{$sellnftarea}-boxtitle{}
 
     #{$sellnftarea}-form{
       padding-top: 20px;
@@ -118,13 +122,49 @@
         }
 
       }
+    }
+  }
 
+  &-summary{
+    width: 100%;
+    max-width: 600px;
+
+    @include BootstrapMaxWidthResponsive(1k){
+      max-width: 500px;
     }
 
-    #{$sellnftarea}-result{
-      padding-top: 20px;
-      text-align: center;
+    #{$sellnftarea}-summlist{
+      padding-top: 25px;
+
+      ul{
+        > li{
+          @include flexbox-display-flex();
+          @include flexbox-flex-wrap(wrap);
+          @include flexbox-justify-content(space-between);
+          @include flexbox-align-items(center);
+          padding: 10px 0;
+
+          &:first-child{padding-top: 0;}
+          &:last-child{padding-bottom: 0;}
+
+          > *{
+            @include flexbox-flex(0 0 auto);
+            width: auto;
+          }
+
+          strong{
+            color: $site-font-clr-pri;
+            font-family: $site-font-family-gilroy-semibold;
+            @include rfs(1.25rem);
+            font-weight: $font-weight-normal;
+          }
+
+        }
+      }
     }
 
+    #{$sellnftarea}-summbttn{
+      padding-top: 25px;
+    }
   }
 }
