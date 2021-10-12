@@ -25,9 +25,11 @@
       @include BootstrapMinWidthResponsive(xl){
         @include flexbox-flex-order(2);
         @include flexbox-flex(0 0 auto);
-        //width: 560px;
-        width: 50%;
+        width: 560px;
         padding-left: $grid-gutter-width;
+      }
+      @include BootstrapMaxWidthResponsive(1k){
+        width: 460px;
       }
       @include BootstrapMaxWidthResponsive(xl){
         @include flexbox-flex(1 0 0%);
