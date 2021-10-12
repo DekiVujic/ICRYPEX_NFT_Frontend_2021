@@ -115,6 +115,11 @@
           max-width: calc(100% / 5);
         }
       }
+
+      .card{
+        background-color: $white;
+        padding: 15px;
+      }
     }
 
   }

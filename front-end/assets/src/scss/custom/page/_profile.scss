@@ -1,0 +1,93 @@
+
+.profile{
+  $profileclassname: &;
+
+  &-sidebar{
+
+    .userminivcardinfo{
+      @include flexbox-flex-direction(column);
+      padding-top: 30px;
+
+      .useravatar{
+        width: 148px;
+        height: 148px;
+        margin: 0 0 10px;
+      }
+    }
+
+    .sidebarbalance{
+      padding-top: 20px;
+
+      .userbalance{
+        @include flexbox-display-flex();
+        @include flexbox-flex-wrap(wrap);
+        @include flexbox-align-items(center);
+        padding-top: 5px;
+
+        > *{
+          @include flexbox-flex(0 0 auto);
+          padding: 0 5px;
+
+          &:first-child{padding-left: 0;}
+          &:last-child{padding-right: 0;}
+        }
+
+        div[class*="sitebg"]{
+          padding: 12px;
+          margin-right: 10px;
+          @include border-radius($border-radius-pill);
+          overflow: hidden;
+        }
+
+        i[class*="icon"]{
+          @include scale(2);
+          display: block;
+        }
+
+        h4{
+          @include font-size(2rem);
+        }
+
+      }
+    }
+
+    .sidebarusermenu{
+      .nav{
+
+        &-item{
+          @include flexbox-flex(0 0 100%);
+          min-width: 100%;
+        }
+
+        &-link{
+          @include flexbox-display-flex();
+          @include flexbox-flex-wrap(wrap);
+          @include flexbox-align-items(center);
+          color: $site-font-clr-pri;
+          font-family: $site-font-family-gilroy-semibold;
+          padding-left: 0;
+          padding-right: 0;
+
+          &:hover,
+          &.active{
+            color: $primary;
+          }
+
+          i[class*="icon"]{margin-right: 8px;}
+        }
+
+      }
+    }
+  }
+
+  &-box{
+    background-color: $white;
+    padding: 20px;
+    @include border-radius($border-radius-lg);
+
+    #{$profileclassname}-boxtitle{
+      margin-bottom: 20px;
+    }
+  }
+
+}
