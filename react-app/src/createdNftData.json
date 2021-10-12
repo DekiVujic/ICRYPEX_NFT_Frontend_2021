@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Vodoo Doll",
+        "owner" : "Icrypex",
+        "imagePath": "D:\/repo-icrypexnft-frontend\/ICRYPEX_NFT_Frontend_2021\/react-app\/src\/assets\/image\/avax_icon.svg",
+        "isfavorite": true,
+        "price": 2.55 
+    },
+    {
+        "id": 2,
+        "name": "Vodoo Doll8",
+        "owner" : "Icrypex",
+        "imagePath": "D:\/repo-icrypexnft-frontend\/ICRYPEX_NFT_Frontend_2021\/react-app\/src\/assets\/image\/avax_icon.svg",
+        "isfavorite": false,
+        "price": 3.28        
+    }
+]

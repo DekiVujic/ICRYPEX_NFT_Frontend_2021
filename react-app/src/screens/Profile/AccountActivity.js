@@ -1,85 +1,53 @@
+import {Fragment, useMemo, useEffect, useState} from "react";
+import DataTable from "../../components/DataTable";
 import {Card, Container, Tab, Table, Tabs} from "react-bootstrap";
+import accActData from "../../accActData.json";
+import { BalanceHistoryCols, PurchaseHistoryCols, SellingCols, SalesHistoryCols } from "../../constants";
 
-const AccountActivity = props => {
+function AccountActivity(props){
+    const [data, setData] = useState([]);
+
+    const balanceHistoryCols = useMemo(
+        () => BalanceHistoryCols,[]
+    );
+    const purchaseHistoryCols = useMemo(
+        () => PurchaseHistoryCols,[]
+    );
+    const sellingCols = useMemo(
+        () => SellingCols,[]
+    );
+    const salesHistoryCols = useMemo(
+        () => SalesHistoryCols,[]
+    );
+
+    useEffect(() => {
+        setData(accActData);
+    }, []);
+   
+
     return (
         <Card style={{ width: '100%', height: '70vh' }} className="text-center">
             <Card.Body >
                 <Tabs defaultActiveKey="balance_history" id="uncontrolled-tab-example" className="mb-3">
                     <Tab eventKey="balance_history" title="Balance History">
                         <Container style={{height:"70vh"}}>
-                            <Table striped bordered hover>
-                                <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Type</th>
-                                    <th>Edition</th>
-                                    <th>Item</th>
-                                    <th>Buyer</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>05.06.201</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                </tr>
-                                </tbody>
-                            </Table>
+                            <DataTable  columns={balanceHistoryCols} data={data} />
                         </Container>
                     </Tab>
                     <Tab eventKey="purchase_history" title="Purchase History" >
-                         <Table striped bordered hover>
-                            <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Order</th>
-                                <th>Edition</th>
-                                <th>Item</th>
-                                <th>Seller</th>
-                                <th>Price</th>
-                                <th>Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>05.06.201</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                            </tr>
-                            </tbody>
-                        </Table>
+                        <Container style={{height:"70vh"}}>
+                            <DataTable  columns={purchaseHistoryCols} data={data} />
+                        </Container>
                     </Tab>
-                    <Tab eventKey="my_bids" title="My Bid's">
-                        <Table striped bordered hover>
-                            <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Highest Bid</th>
-                                <th>Your Bid</th>
-                                <th>Time Left</th>
-                                <th>Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                                <td>Lorem Ipsum</td>
-                            </tr>
-                            </tbody>
-                        </Table>
+                    <Tab eventKey="selling" title="Selling"> 
+                        <Container style={{height:"70vh"}}>
+                            <DataTable  columns={sellingCols} data={data} />
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="sales_history" title="Sales History"> 
+                        <Container style={{height:"70vh"}}>
+                            <DataTable  columns={salesHistoryCols} data={data} />
+                        </Container>
                     </Tab>
                 </Tabs>
             </Card.Body>

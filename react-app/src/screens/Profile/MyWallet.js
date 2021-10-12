@@ -1,9 +1,14 @@
 import {Button, Card, Col, Container, Image, Row, Tab, Tabs} from "react-bootstrap";
-
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import avax_icon from "../../assets/image/avax_icon.svg";
  
 
 const MyWallet = props => {
+    const { t } = useTranslation(["common", "profile"]);
+    const { lang } = useSelector(state => state.ui);
+
+
     return (
         <Container>
             <Row>

@@ -5,7 +5,7 @@ import MyWallet from "./MyWallet"
 import AccountActivity from "./AccountActivity";
 import MyNfts from "./MyNfts";
 import Settings from "./Settings";
-import { dictMyWallet, dictAccActivities, dictMyNfts, dictSettings } from "../../constants";
+import {dictProfile, dictMyWallet, dictAccActivities, dictMyNfts, dictSettings } from "../../constants";
 
 function Profile(props) {
     const { lang } = useSelector(state => state.ui);
@@ -18,6 +18,11 @@ function Profile(props) {
                     <ProfileLeftMenu />
                 </Col>
                 <Col xs lg="9">
+                    {
+                        window.location.pathname === dictProfile[lang] ? (
+                            <MyNfts />
+                        ) : null
+                    }
                     {
                         window.location.pathname === dictMyWallet[lang] ? (
                             <MyWallet />

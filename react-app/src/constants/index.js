@@ -45,3 +45,116 @@ export const dictCreateNft = {
     tr: "/createNft",
     en: "/createNft"
 }
+//Table Columns
+export const BalanceHistoryCols = [
+    {
+        Header: "Date",
+        accessor: "date"
+    },
+    {
+        Header: "Type",
+        accessor: "type"
+    },            
+    {
+        Header: "Edition",
+        accessor: "edition"
+    },
+    {
+        Header: "Item",
+        accessor: "item"
+    },
+    {
+        Header: "Buyer",
+        accessor: "buyer"
+    },
+    {
+        Header: "Amount",
+        accessor: "amount"
+    },
+    {
+        Header: "Status",
+        accessor: "status"
+    }
+];
+export const PurchaseHistoryCols = [
+    {
+        Header: "Date",
+        accessor: "date"
+    },
+    {
+        Header: "Order",
+        accessor: "order"
+    },            
+    {
+        Header: "Edition",
+        accessor: "edition"
+    },
+    {
+        Header: "Item",
+        accessor: "item"
+    },
+    {
+        Header: "Seller",
+        accessor: "seller"
+    },
+    {
+        Header: "Price",
+        accessor: "price"
+    },
+    {
+        Header: "Status",
+        accessor: "status"
+    }
+];
+export const SellingCols = [
+    {
+        Header: "Item",
+        accessor: "item"
+    },
+    {
+        Header: "Highest Bid",
+        accessor: "highestBid"
+    },
+    {
+        Header: "Your Bid",
+        accessor: "yourBid"
+    },            
+    {
+        Header: "Time Left",
+        accessor: "timeLeft"
+    },
+    {
+        Header: "Status",
+        accessor: "status"
+    }
+];
+export const SalesHistoryCols = [
+    {
+        Header: "Date",
+        accessor: "date"
+    },
+    {
+        Header: "Order",
+        accessor: "order"
+    },            
+    {
+        Header: "Edition",
+        accessor: "edition"
+    },
+    {
+        Header: "Item",
+        accessor: "item"
+    },
+    {
+        Header: "Seller",
+        accessor: "seller"
+    },
+    {
+        Header: "Price",
+        accessor: "price"
+    },
+    {
+        Header: "Status",
+        accessor: "status"
+    }
+];
