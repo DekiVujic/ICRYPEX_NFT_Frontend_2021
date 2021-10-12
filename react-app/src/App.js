@@ -37,14 +37,14 @@ function App() {
                     <Header />
                     <Faq />
                 </Route>
-                <Route exact path={[...pathProfile]}>
+                <Route exact path={[...pathProfile,...pathMyWallet,...pathAccActivities,...pathMyNfts,...pathSettings]}>
                     <Header />
                     <Profile />
                 </Route>
-                <Route exact path={[...pathMyWallet]}>
+                {/* <Route exact path={[...pathMyWallet]}>
                     <Header />
                     <Profile />
-                </Route>
+                </Route> 
                 <Route exact path={[...pathAccActivities]}>
                     <Header />
                     <Profile />
@@ -60,7 +60,7 @@ function App() {
                 <Route exact path={[...pathCreateNft]}>
                     <Header />
                     <CreateNft />
-                </Route>
+                </Route>*/}
                 <Route path="/">
                     <Home />
                 </Route>

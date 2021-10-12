@@ -145,7 +145,7 @@ const SignUp = () => {
                                                 </FloatingLabel>
                                             </Col>
                                         </Row>
-                                        <FloatingLabel className="form-group" label="Username">
+                                        <FloatingLabel className="form-group" label={t("login:username")}>
                                             <FormControl size="lg" 
                                                 type="text"
                                                 name="username"
@@ -191,7 +191,7 @@ const SignUp = () => {
                                                 </FloatingLabel>
                                             </InputGroup>
                                         </FormGroup>
-                                        <FloatingLabel className="form-group" label="Email">
+                                        <FloatingLabel className="form-group" label={t("login:email")}>
                                             <FormControl size="lg"
                                                 type="email"
                                                 name="email"
@@ -204,7 +204,7 @@ const SignUp = () => {
                                                 </Form.Text>
                                             )}
                                         </FloatingLabel>
-                                        <FloatingLabel className="form-group showhidepass" label="Password">
+                                        <FloatingLabel className="form-group showhidepass" label={t("login:password")}>
                                             <FormControl size="lg" 
                                                 type={passShown ? "text" : "password"}
                                                 name="pass"
