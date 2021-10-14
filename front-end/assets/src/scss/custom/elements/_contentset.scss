@@ -48,7 +48,38 @@
     }
   }
 
-  &-desc{}
+  &-desc{
+
+
+    ul.ullistdotted{
+
+      li{
+        position: relative;
+        padding-left: 15px;
+        margin-top: 5px;
+
+        &:first-child{margin-top: 0;}
+
+        &::before{
+          content: "";
+          position: absolute;
+          background-color: $primary;
+          width: 8px;
+          height: 8px;
+          left: 0;
+          top: 7px;
+          @include border-radius($border-radius-pill);
+
+          @include BootstrapMaxWidthResponsive(1k){
+            top: 6px;
+          }
+          @include BootstrapMaxWidthResponsive(lg){
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
 
 }
 
