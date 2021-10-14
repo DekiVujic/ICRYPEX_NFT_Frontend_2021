@@ -151,6 +151,15 @@
           height: 24px;
           position: absolute;
         }
+
+        .delistbtn{
+          @include button-variant($white, $white, $white, darken($warning, 5%), darken($warning, 5%), $white);
+          color: $primary;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          display: none;
+        }
       }
 
     }
@@ -176,6 +185,10 @@
         background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMi4xODciIGhlaWdodD0iMTQuODU4IiB2aWV3Qm94PSIwIDAgMjIuMTg3IDE0Ljg1OCI+DQogIDxwYXRoIGlkPSJDaGVjayIgZD0iTS03ODY2LjY3NywzNjk3LjcyOWw2LjEyOCw1Ljk4OCwxMC40LTEwLjAzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3ODY5LjUwNSAtMzY5MC44NTgpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+DQo8L3N2Zz4NCg==");
         top: 17px;
         right: 17px;
+      }
+
+      .delistbtn{
+        display: block;
       }
     }
   }
