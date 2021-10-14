@@ -35,6 +35,46 @@
     i[class*="icon"]{margin-right: 8px;}
   }
 
+  &-navtabs{
+    .nav-tabs{
+      padding-top: 3px;
+      border-bottom: 1px solid $gray-400;
+
+      .nav-item{
+        margin-right: 20px;
+
+        &:last-child{margin-right: 0;}
+      }
+
+      .nav-link{
+        color: $site-font-clr-sec;
+        background-color: transparent;
+        @include font-size(1.125rem);
+        padding: 0 0 1rem;
+        border: none;
+        position: relative;
+
+        &::after{
+          content: "";
+          background-color: transparent;
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+        }
+
+        &.active{
+          color: $site-font-clr-pri;
+
+          &::after{
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media print{

@@ -116,9 +116,9 @@
                         <!-- Tabs -->
                         <div class="elastic-navtabs">
                             <div class="nav nav-pills">
-                                <input class="nav-radio" type="radio" name="navtabsradio" id="tab1" checked>
+                                <input class="nav-radio" type="radio" name="navtabsradio" id="tab1">
                                 <div class="nav-item"><label class="nav-link" for="tab1">USDT</label></div>
-                                <input class="nav-radio" type="radio" name="navtabsradio" id="tab2">
+                                <input class="nav-radio" type="radio" name="navtabsradio" id="tab2" checked>
                                 <div class="nav-item"><label class="nav-link" for="tab2">AVAX</label></div>
                                 <div class="nav-bottombar"></div>
                             </div>
@@ -145,71 +145,284 @@
                 <div class="main-article">
                     <div class="profile-box">
 
-                        <!-- Title -->
-                        <div class="profile-boxtitle boxtitle boxtitle-border">
-                            <h2>Created</h2>
-                        </div>
-                        <!-- Title -->
-                        <!-- Card List -->
-                        <div class="profilecreated-cardlist nftcardlisting">
-                            <ul class="cardlist">
-                                <li>
-                                    <div class="card">
-                                        <a href="Create_NFT.html" class="dropzone dropzone-lg" title="Create New NFT">
-                                            <div class="dz-default dz-message">
-                                                <i class="dz-button"></i>
-                                            </div>
-                                        </a>
-                                        <div class="card-head">
-                                            <div class="card-body">
-                                                <h4 class="card-title"><a href="Create_NFT.html" title="Name" rel="bookmark">Create New NFT</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="card cardstatus pending">
-                                        <div class="card-img">
-                                            <a href="Detail_NFT.html" title="Name" rel="bookmark">
-                                                <img src="../assets/img/upload/marketplace_cardlist_item_02.jpg" alt="Name" />
-                                            </a>
-                                        </div>
-                                        <div class="card-head">
-                                            <div class="card-body">
-                                                <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
-                                                <p class="card-desc">By Gallery New york</p>
-                                            </div>
-                                            <div class="card-bttn">
-                                                <ul class="cardbtnlist">
-                                                    <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
-                                                    <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
-                                                </ul>
-                                                <p class="card-desc">122</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-foot">
-                                            <div class="card-body">
-                                                <p class="card-desc">Voodoo Doll #107</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                        <!-- Tabs Title -->
+                        <div class="profile-boxtitle boxtitle boxtitle-navtabs">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item"><button class="nav-link active" type="button" data-bs-toggle="tab" data-bs-target="#Created" role="tab" aria-selected="true">Created</button></li>
+                                <li class="nav-item"><button class="nav-link" type="button" data-bs-toggle="tab" data-bs-target="#Collectibles" role="tab" aria-selected="false">Collectibles</button></li>
+                                <li class="nav-item"><button class="nav-link" type="button" data-bs-toggle="tab" data-bs-target="#Favorites" role="tab" aria-selected="false">Favorites</button></li>
+                                <li class="nav-item"><button class="nav-link" type="button" data-bs-toggle="tab" data-bs-target="#Selling" role="tab" aria-selected="false">Selling</button></li>
                             </ul>
                         </div>
-                        <!-- Card List -->
-                        <!-- Pagination -->
-                        <div class="profile-pagination">
-                            <nav class="sitepagination">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                                </ul>
-                            </nav>
+                        <!-- Tabs Title -->
+                        <!-- Tabs Content -->
+                        <div class="profile-tabcontent tab-content">
+
+                            <!-- Tab Created -->
+                            <div class="tab-pane fade show active" id="Created" role="tabpanel">
+                                <!-- Card List -->
+                                <div class="profilecreated-cardlist nftcardlisting">
+                                    <ul class="cardlist">
+                                        <li>
+                                            <div class="card">
+                                                <a href="Create_NFT.html" class="dropzone dropzone-lg" title="Create New NFT">
+                                                    <div class="dz-default dz-message">
+                                                        <i class="dz-button"></i>
+                                                    </div>
+                                                </a>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Create_NFT.html" title="Name" rel="bookmark">Create New NFT</a></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuspending">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_01.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuscheck">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_02.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuspending">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_03.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuspending">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_04.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuscheck">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_05.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuspending">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_06.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn active" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuspending">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_07.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card cardstatus statuscheck">
+                                                <div class="card-img">
+                                                    <a href="Detail_NFT.html" title="Name" rel="bookmark">
+                                                        <img src="../assets/img/upload/marketplace_cardlist_item_08.jpg" alt="Name" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-head">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><a href="Detail_NFT.html" title="Name" rel="bookmark">Voodoo Doll</a> <span class="badge bg-warning">3.6</span></h4>
+                                                        <p class="card-desc">By Gallery New york</p>
+                                                    </div>
+                                                    <div class="card-bttn">
+                                                        <ul class="cardbtnlist">
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-favorite"></i></button></li>
+                                                            <li><button class="cardbtnlist-btn" type="button"><i class="icon-iconsetsmclrd icon-20 icon-collection"></i></button></li>
+                                                        </ul>
+                                                        <p class="card-desc">122</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-foot">
+                                                    <div class="card-body">
+                                                        <p class="card-desc">Voodoo Doll #107</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Card List -->
+                                <!-- Pagination -->
+                                <div class="profile-pagination">
+                                    <nav class="sitepagination">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Pagination -->
+                            </div>
+                            <!-- Tab Created -->
+                            <!-- Tab Collectibles -->
+                            <div class="tab-pane fade" id="Collectibles" role="tabpanel">Collectibles</div>
+                            <!-- Tab Collectibles -->
+                            <!-- Tab Favorites -->
+                            <div class="tab-pane fade" id="Favorites" role="tabpanel">Favorites</div>
+                            <!-- Tab Favorites -->
+                            <!-- Tab Selling -->
+                            <div class="tab-pane fade" id="Selling" role="tabpanel">Selling</div>
+                            <!-- Tab Selling -->
+
                         </div>
-                        <!-- Pagination -->
+                        <!-- Tabs Content -->
 
                     </div>
                 </div>

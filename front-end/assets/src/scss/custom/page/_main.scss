@@ -3,6 +3,10 @@
   padding: 50px 0;
   $mainclassname: &;
 
+  @include BootstrapMaxWidthResponsive(1k){
+    padding: 20px 0;
+  }
+
   &-wrapper{
     @include flexbox-display-flex();
     @include flexbox-flex-wrap(wrap);
