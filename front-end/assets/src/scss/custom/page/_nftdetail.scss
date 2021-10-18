@@ -399,4 +399,202 @@
 
     }
   }
+
+}
+
+.nftcheckoutmodal{
+  $nftcheckoutmodal: &;
+
+  .modal-content{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-body{
+    padding-left: 0;
+    padding-right: 0;
+
+    .siteform .formfieldset + .formfieldset{
+      padding-top: 20px;
+    }
+  }
+
+  &-top{
+
+    #{$nftcheckoutmodal}-nftinfo{
+      @include flexbox-display-flex();
+      @include flexbox-flex-wrap(wrap);
+      @include flexbox-justify-content(space-between);
+
+      h6{
+        font-family: $site-font-family-gilroy-regular;
+        margin-bottom: 5px;
+      }
+
+      .nftitem{
+        @include flexbox-flex(1 0 0%);
+        width: 100%;
+
+        &-tumb{
+          @include flexbox-display-flex();
+          @include flexbox-flex-wrap(wrap);
+          @include flexbox-justify-content(space-between);
+
+          .tumbimage{
+            @include flexbox-flex(0 0 auto);
+            width: auto;
+            height: 100%;
+            margin-right: $grid-gutter-width * 0.5;
+            @include border-radius($border-radius);
+            overflow: hidden;
+
+            > img{
+              width: 100%;
+              height: 100%;
+              max-width: 110px;
+              @include border-radius($border-radius);
+              @include object-fit(cover, center);
+            }
+          }
+
+          .nftowner{
+            @include flexbox-flex(1 0 0%);
+            width: 100%;
+          }
+        }
+
+        h5{
+          color: $site-font-clr-pri;
+          @include font-size(1.125rem);
+          margin-top: 15px;
+        }
+      }
+
+      .nftprice{
+        @include flexbox-flex(0 0 auto);
+        width: auto;
+        margin-left: $grid-gutter-width * 0.5;
+        text-align: right;
+
+        .exctotal{
+          @include flexbox-display-flex();
+          @include flexbox-flex-wrap(wrap);
+          @include flexbox-justify-content(space-between);
+          //@include flexbox-align-items(center);
+          line-height: 1;
+          padding-top: 20px;
+
+          > *{
+            @include flexbox-flex(0 0 auto);
+          }
+
+          &-icon{
+            height: max-content;
+            padding: 12px;
+            margin-right: 5px;
+            @include border-radius($border-radius-pill);
+            overflow: hidden;
+
+            i[class*="icon"]{
+              @include scale(2);
+              display: block;
+            }
+          }
+
+          &-price{
+            height: auto;
+
+            h4{
+              @include font-size(2rem);
+            }
+          }
+
+        }
+      }
+    }
+
+    .form-check{
+      margin-top: 15px;
+    }
+  }
+
+  &-bottom{
+    margin-top: 20px;
+    border-top: 1px solid $border-color;
+
+    #{$nftcheckoutmodal}-balance{
+      @include flexbox-display-flex();
+      @include flexbox-flex-wrap(wrap);
+      @include flexbox-align-items(baseline);
+
+      > *{
+        @include flexbox-flex(0 0 auto);
+        width: auto;
+      }
+
+      h4{
+        color: $site-font-clr-pri;
+        font-family: $site-font-family-gilroy-semibold;
+        @include font-size(1.5rem);
+      }
+
+      span{
+        font-family: $site-font-family-gilroy-regular;
+        @include font-size(1.125rem);
+        margin-left: 10px;
+      }
+    }
+
+    #{$nftcheckoutmodal}-buttons{
+      @include flexbox-display-flex();
+      @include flexbox-flex-direction(column);
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      padding: 25px 0;
+
+      &-items{
+        padding: 10px 0;
+        text-align: center;
+
+        &:first-child{padding-top: 0;}
+        &:last-child{padding-bottom: 0;}
+      }
+
+      .btn{
+        width: 100%;
+
+
+        &.btn-icon{
+          position: relative;
+          padding-right: calc(#{$btn-padding-x-lg} + 60px);
+
+          &::before{
+            content: "";
+            background-color: $white;
+            width: 60px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            @include border-radius(0 $btn-border-radius-lg $btn-border-radius-lg 0);
+          }
+
+          i[class*="icon"]{
+            margin: 0 5px;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            @include translateY(-50%);
+          }
+          i[class*="deposit"]{right: 9px;}
+          i[class*="curravax"]{right: 9px;}
+          i[class*="currtransfer"]{right: 9px;}
+          i[class*="chancecrypto"]{right: 4px;}
+        }
+      }
+    }
+
+  }
 }

@@ -95,6 +95,23 @@
     }
   }
 
+  &-iconsetautoclrd{
+    background-image: url(#{$path-img-url-icons}/icons_spite_iconsetautoclrd.svg#{$cache-busting});
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    position: relative;
+
+    &#{$iconclassname}-34{
+      height: 34px;
+
+      &#{$iconclassname}-deposit{background-position: calc(-34px*0) 0; width: 34px;}
+      &#{$iconclassname}-curravax{background-position: calc(-34px*1) 0; width: 34px;}
+      &#{$iconclassname}-currtransfer{background-position: calc(-34px*2) 0; width: 34px;}
+      &#{$iconclassname}-chancecrypto{background-position: calc(-34px*3) 0; width: 44px;}
+    }
+  }
+
   &-sprtsmcurrency{
     background-image: url(#{$path-img-url-icons}/icons_spite_16_currencysmallicon.svg#{$cache-busting});
     background-repeat: no-repeat;
