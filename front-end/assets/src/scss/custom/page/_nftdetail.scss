@@ -563,11 +563,11 @@
 
       .btn{
         width: 100%;
-
-
+        
         &.btn-icon{
           position: relative;
           padding-right: calc(#{$btn-padding-x-lg} + 60px);
+          overflow: hidden;
 
           &::before{
             content: "";
@@ -577,7 +577,6 @@
             position: absolute;
             right: 0;
             top: 0;
-            @include border-radius(0 $btn-border-radius-lg $btn-border-radius-lg 0);
           }
 
           i[class*="icon"]{
