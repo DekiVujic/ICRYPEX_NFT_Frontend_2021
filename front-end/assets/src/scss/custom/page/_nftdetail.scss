@@ -508,7 +508,6 @@
               @include font-size(2rem);
             }
           }
-
         }
       }
     }
@@ -563,7 +562,7 @@
 
       .btn{
         width: 100%;
-        
+
         &.btn-icon{
           position: relative;
           padding-right: calc(#{$btn-padding-x-lg} + 60px);

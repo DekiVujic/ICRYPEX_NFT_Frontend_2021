@@ -1,0 +1,92 @@
+
+.profilewallet{
+  padding-top: 20px;
+  $profilewallet: &;
+
+  &-list{
+    @include flexbox-display-flex();
+    @include flexbox-flex-wrap(wrap);
+    margin-left: -$grid-gutter-width * 0.25;
+    margin-right: -$grid-gutter-width * 0.25;
+
+    > li{
+      @include flexbox-flex(0 0 calc(100% / 3));
+      max-width: calc(100% / 3);
+      width: 100%;
+      padding-left: $grid-gutter-width * 0.25;
+      padding-right: $grid-gutter-width * 0.25;
+      padding-bottom: $grid-gutter-width * 0.5;
+    }
+  }
+
+  &-box{
+    background-color: $white;
+    padding: 20px;
+    border: 1px solid $border-color;
+    @include border-radius($border-radius);
+
+    #{$profilewallet}-asstop{
+      @include flexbox-display-flex();
+      @include flexbox-flex-wrap(wrap);
+      @include flexbox-justify-content(space-between);
+
+      .currname{
+        @include flexbox-display-flex();
+        @include flexbox-flex-wrap(wrap);
+        @include flexbox-align-items(center);
+
+        > *{
+          @include flexbox-flex(0 0 auto);
+        }
+
+        &-icon{
+          height: max-content;
+          padding: 17px;
+          margin-right: 10px;
+          @include border-radius($border-radius-pill);
+          overflow: hidden;
+
+          i[class*="icon"]{
+            @include scale(2.5);
+            display: block;
+          }
+        }
+
+        &-text{
+          height: auto;
+
+          h4{
+            @include font-size(1.5rem);
+          }
+        }
+      }
+
+      .currbalance{
+
+        strong{
+          @include font-size(2.25rem);
+          display: block;
+        }
+      }
+    }
+
+    #{$profilewallet}-assbtn{
+      @include flexbox-display-flex();
+      @include flexbox-flex-wrap(wrap);
+      border-top: 1px solid $border-color;
+      margin-top: 20px;
+      padding-top: 20px;
+
+      > *{
+        @include flexbox-flex(1 0 0%);
+        width: 100%;
+        margin-left: $grid-gutter-width * 0.25;
+        margin-right: $grid-gutter-width * 0.25;
+
+        &:first-child{margin-left: 0;}
+        &:last-child{margin-right: 0;}
+      }
+    }
+  }
+
+}
