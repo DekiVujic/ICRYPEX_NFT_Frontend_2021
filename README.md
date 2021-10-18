@@ -14,6 +14,7 @@
 - [Profile_Created_List](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_Created_List.html)
 - [Profile_Created_List_Delist_Modal](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_Created_List_Delist_Modal.html)
 - [Profile_MyWallet](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_MyWallet.html)
+- [Profile_Account_Activity_Purchase_History](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_Account_Activity_Purchase_History.html)
    
 
 # NodeJS Kurulumu
