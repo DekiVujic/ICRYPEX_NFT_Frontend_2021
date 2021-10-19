@@ -6,7 +6,7 @@ body.comingsoon{
   max-height: 100vh;
   overflow: hidden;
   position: relative;
-  padding-top: 20px;
+  //padding-top: 20px;
 
   .header,
   .main,
@@ -39,7 +39,7 @@ div.comingsoon{
 
   &::before{
     content: "";
-    background-color: transparentize($white, 0.25);
+    background-color: transparentize($white, 0.50);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -57,12 +57,13 @@ div.comingsoon{
     height: 15000px;
     position: absolute;
     z-index: 9998;
-    top: calc(50% - 15px);
+    top: calc(50% - 5px);
     left: 50%;
     @include translateX(-50%);
     @include border-radius(100%);
-    box-shadow: 0 0 250px 0 transparentize($yellow, 0.50);
+    box-shadow: 0 0 350px 350px transparentize($yellow, 0.75);
     overflow: hidden;
+    @include animation-multi(RainbowBgColor 4s steps(36) infinite);
   }
 
   &-wrp{
@@ -88,13 +89,17 @@ div.comingsoon{
 
       h1{
         color: $green;
-        font-size: 4rem;
-        //text-shadow: 0 0 15px transparentize($black, 0.70);
+        font-size: 3rem;
         position: relative;
-        top: -25px;
-        left: 65px;
+        top: -20px;
+        left: 67px;
+        //@include animation-multi(RainbowBgColor 4s steps(36) infinite);
       }
     }
   }
 
+  @include keyframes(RainbowBgColor){
+    from {@include filter-multiple(hue-rotate(10deg));}
+    to {@include filter-multiple(hue-rotate(360deg));}
+  }
 }
