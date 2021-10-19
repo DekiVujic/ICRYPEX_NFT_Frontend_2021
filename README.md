@@ -1,6 +1,7 @@
 # Frontend
 
 #### Web Public Area Frontend List
+- [Coming_Soon](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Coming_Soon.html)
 - [Home_Page](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Home_Page.html)
 - [Sign_Up](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_Up.html)
 - [Sign_In](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_In.html)

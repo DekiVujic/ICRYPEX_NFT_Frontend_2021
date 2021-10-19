@@ -1,0 +1,100 @@
+
+body.comingsoon{
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding-top: 20px;
+
+  .header,
+  .main,
+  .footer{
+    @include filter-multiple(blur(4px));
+  }
+
+
+  *, &::before, &::after{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+
+}
+
+div.comingsoon{
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9996;
+  overflow: hidden;
+
+  &::before{
+    content: "";
+    background-color: transparentize($white, 0.25);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    //@include backdrop-filter-multiple(blur(10px));
+  }
+
+  &::after{
+    content: "";
+    background-color: transparentize($white, 0);
+    width: 15000px;
+    height: 15000px;
+    position: absolute;
+    z-index: 9998;
+    top: calc(50% - 15px);
+    left: 50%;
+    @include translateX(-50%);
+    @include border-radius(100%);
+    box-shadow: 0 0 250px 0 transparentize($yellow, 0.50);
+    overflow: hidden;
+  }
+
+  &-wrp{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    z-index: 9999;
+
+    &-logo{
+      padding: 15px 0;
+      position: relative;
+
+      .headlogo{
+        @include scale(2);
+      }
+
+    }
+
+    &-cont{
+      position: relative;
+
+      h1{
+        color: $green;
+        font-size: 4rem;
+        //text-shadow: 0 0 15px transparentize($black, 0.70);
+        position: relative;
+        top: -25px;
+        left: 65px;
+      }
+    }
+  }
+
+}
