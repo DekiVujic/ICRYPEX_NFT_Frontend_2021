@@ -5,4 +5,4 @@
 
 //import Alert from 'bootstrap/js/dist/alert';
 
-import { Dropdown, Tab, Modal, Alert, Tooltip, Popover } from 'bootstrap';
+import { Dropdown, Tab, Modal, Alert, Tooltip, Popover, Collapse } from 'bootstrap';

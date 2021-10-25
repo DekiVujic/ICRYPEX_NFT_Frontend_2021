@@ -5,6 +5,10 @@
 - [Home_Page](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Home_Page.html)
 - [Sign_Up](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_Up.html)
 - [Sign_In](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_In.html)
+- [FAQ](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/FAQ.html)
+
+
+#### Web Client Area Frontend List
 - [Marketplace](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Marketplace.html)
 - [Detail_NFT](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Detail_NFT.html)
 - [Detail_NFT_Checkout_Modal](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Detail_NFT_Checkout_Modal.html)
@@ -18,7 +22,6 @@
 - [Profile_Account_Activity_Balance_History](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_Account_Activity_Balance_History.html)
 - [Profile_Account_Activity_Purchase_History](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_Account_Activity_Purchase_History.html)
 - [Profile_Account_Activity_My_Bids](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Profile_Account_Activity_My_Bids.html)
-   
 
 # NodeJS Kurulumu
   

@@ -1,0 +1,118 @@
+
+.faqarea{
+  $faqareaclassname: &;
+
+  &-box{
+    background-color: $white;
+    padding: 20px;
+    height: 100%;
+    @include border-radius($border-radius-lg);
+
+    #{$faqareaclassname}-boxtitle{
+      margin-bottom: 20px;
+    }
+  }
+
+  &-list{
+
+    &-item{
+      background-color: $gray-200;
+      margin-bottom: 20px;
+      @include border-radius($border-radius);
+      position: relative;
+
+      @include BootstrapMaxWidthResponsive(1k){
+        margin-bottom: 10px;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    &-head{
+
+      .btn{
+        @include flexbox-display-flex();
+        @include flexbox-flex-wrap(wrap);
+        @include flexbox-align-items(center);
+        width: 100%;
+        min-height: 50px;
+        color: $site-font-clr-pri;
+        font-family: $site-font-family-gilroy-semibold;
+        @include font-size(1.125rem);
+        font-weight: $font-weight-bold;
+        padding: 10px 15px 10px 65px;
+        border: none;
+        white-space: normal;
+        text-align: left;
+        text-decoration: none;
+
+        @include BootstrapMaxWidthResponsive(1k){
+          @include font-size(1rem);
+        }
+
+        > *{
+          @include flexbox-flex(0 0 auto);
+          width: auto;
+          max-width: 100%;
+          line-height: 1.2;
+        }
+
+        &[aria-expanded="false"] .faqcollapseicon{
+          //height: calc(100% - 8px);
+
+          &::after{opacity: 1;}
+        }
+        &[aria-expanded="true"] .faqcollapseicon{
+          //height: calc(100% - 8px);
+          background-color: $primary;
+
+          &::after{opacity: 0;}
+        }
+      }
+
+      .faqcollapseicon{
+        background-color: $primary;
+        width: 42px;
+        //height: 42px;
+        min-height: 42px;
+        margin-right: 10px;
+        @include border-radius($border-radius * 0.75);
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        @include transition-multiple(height 0.35s ease, background 0.35s ease);
+
+        &::before,
+        &::after{
+          content: "";
+          background-color: darken($primary, 40%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include translate(-50%, -50%);
+          @include border-radius(2px);
+          @include transition-multiple(opacity 0.35s ease);
+        }
+
+        &::before{
+          width: 16px;
+          height: 2px;
+        }
+
+        &::after{
+          width: 2px;
+          height: 16px;
+        }
+      }
+    }
+
+    &-cont{
+      color: #687076;
+      padding: 0 15px 15px 65px;
+    }
+
+  }
+
+}
