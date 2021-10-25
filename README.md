@@ -5,6 +5,7 @@
 - [Home_Page](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Home_Page.html)
 - [Sign_Up](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_Up.html)
 - [Sign_In](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_In.html)
+- [About_Us](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/About_Us.html)
 - [FAQ](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/FAQ.html)
 
 

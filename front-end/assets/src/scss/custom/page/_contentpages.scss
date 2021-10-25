@@ -1,0 +1,35 @@
+
+.contentpages{
+  $contentpagesclassname: &;
+
+  &-box{
+    background-color: $white;
+    padding: 20px;
+    height: 100%;
+    @include border-radius($border-radius-lg);
+
+    #{$contentpagesclassname}-headimg{
+      width: 100%;
+      //height: 300px;
+      @include border-radius($border-radius-sm);
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        max-width: inherit;
+        //height: 100%;
+        height: 300px;
+        @include border-radius($border-radius-sm);
+        @include object-fit(cover, center);
+      }
+
+      & + #{$contentpagesclassname}-boxtitle{margin-top: 25px;}
+      & + #{$contentpagesclassname}-cont{margin-top: 25px;}
+    }
+
+    #{$contentpagesclassname}-boxtitle{
+      margin-bottom: 20px;
+    }
+  }
+
+}
