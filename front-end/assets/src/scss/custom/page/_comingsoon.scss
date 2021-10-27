@@ -88,6 +88,27 @@ body.comingsoon{
       width: 100%;
       height: 100%;
 
+      &.leadsecform{
+        @include background-linear(transparent, $black, -90);
+
+        @include BootstrapMaxWidthResponsive(lg){
+          background-color: transparent;
+          background-image: none;
+        }
+
+        .comingsoonsec-head-img{
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_form_bg.png#{$cache-busting});
+        }
+      }
+
+      &.leadsecconfirm{
+        background-color: transparent;
+
+        .comingsoonsec-head-img{
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_confirm_bg.png#{$cache-busting});
+        }
+      }
+
       &-head{
         @include flexbox-display-flex();
         @include flexbox-flex-flow(column);
@@ -100,7 +121,7 @@ body.comingsoon{
           @include flexbox-align-items(center);
           @include flexbox-justify-content(center);
           background-color: transparent;
-          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_bg.svg#{$cache-busting});
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_form_bg.png#{$cache-busting});
           background-repeat: no-repeat;
           background-position: center center;
           background-size: auto 400px;
@@ -227,7 +248,9 @@ body.comingsoon{
               }
 
               &.btn-primary{
-                border-color: lighten($primary, 5%);
+                @include button-variant(#357CE1, #357CE1, #357CE1, #2B64B6, #2B64B6, $white);
+                color: $white;
+                border-color: #357CE1;
               }
             }
           }
@@ -235,6 +258,7 @@ body.comingsoon{
       }
 
       &-foot{
+        @include background-linear(transparent, $black, -90);
         @include flexbox-flex(0);
         padding: 40px 0;
 
@@ -302,7 +326,7 @@ body.comingsoon{
                 > .form-control:focus ~ label,
                 > .form-control:not(:placeholder-shown) ~ label,
                 > .form-select ~ label{
-                  color: $primary;
+                  color: #357CE1;
                   padding-left: 0;
                   opacity: 1;
                   @include transform-multiple(scale(0.75) translateY(-0.75rem) translateX(0rem));
@@ -392,7 +416,7 @@ body.comingsoon{
 
                   &:focus ~ .inputbottombar:before,
                   &:focus ~ .inputbottombar:after{
-                    background-color: $primary;
+                    background-color: #357CE1;
                   }
 
                   &:valid ~ .inputbottombar:before,
@@ -493,7 +517,9 @@ body.comingsoon{
               }
 
               &.btn-primary{
-                border-color: lighten($primary, 5%);
+                @include button-variant(#357CE1, #357CE1, #357CE1, #2B64B6, #2B64B6, $white);
+                color: $white;
+                border-color: #357CE1;
               }
             }
           }
