@@ -49,6 +49,7 @@ body.comingsoon{
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+    min-height: 100vh;
     padding-top: 70px;
     position: relative;
 
@@ -178,8 +179,59 @@ body.comingsoon{
             }
           }
 
-        }
+          .confirmicon{
+            @include flexbox-display-flex();
+            @include flexbox-flex-direction(column);
+            @include flexbox-align-items(center);
+            @include flexbox-justify-content(center);
+            padding: 16px 0;
+            margin-bottom: 15px;
 
+            > div[class*="icon"]{
+              @include scale(2);
+            }
+          }
+
+          .confirmbutton{
+            @include flexbox-display-flex();
+            @include flexbox-flex-wrap(wrap);
+            @include flexbox-justify-content(center);
+            @include flexbox-flex-basis(0);
+            @include flexbox-flex-grow(1);
+            max-width: 100%;
+            width:100%;
+            padding-top: 25px;
+            position:relative;
+
+            @include BootstrapMaxWidthResponsive(hd){
+              padding-top: 10px;
+            }
+
+            .submitbtn{
+              color: $white;
+              min-width: 270px;
+              text-transform: uppercase;
+              @include font-size(1.25rem);
+
+              @include BootstrapMaxWidthResponsive(1k){
+                min-width: 238px;
+              }
+              @include BootstrapMaxWidthResponsive(hd){
+                min-width: 214px;
+              }
+              @include BootstrapMaxWidthResponsive(xl){
+                min-width: 170px;
+              }
+              @include BootstrapMaxWidthResponsive(xs){
+                min-width: 100%;
+              }
+
+              &.btn-primary{
+                border-color: lighten($primary, 5%);
+              }
+            }
+          }
+        }
       }
 
       &-foot{
@@ -440,8 +492,8 @@ body.comingsoon{
                 min-width: 100%;
               }
 
-              &.btn-success{
-                border-color: lighten($site-clr-green, 5%);
+              &.btn-primary{
+                border-color: lighten($primary, 5%);
               }
             }
           }
