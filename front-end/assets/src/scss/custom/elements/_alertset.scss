@@ -1,0 +1,115 @@
+/* Variables */
+$alert-bg-color:      transparent;
+$alert-text-color:    $site-clr-white;
+$alert-border-color:  $border-color;
+/* Variables */
+
+.alert{
+  //color: $alert-text-color;
+  background-color: $alert-bg-color;
+  //border-color: $alert-border-color;
+  $alertclassname: &;
+
+  .close{
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: $font-weight-normal;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    position: absolute;
+    right: $alert-padding-y;
+    top: $alert-padding-y;
+    text-shadow: none;
+    @include border-radius(50%);
+
+    span{
+      position: relative;
+      top: -5px;
+    }
+
+    &:hover{
+      color: $alert-text-color;
+    }
+  }
+
+  &-heading{
+    font-size: $font-size-base;
+    margin-bottom: 0;
+  }
+
+  p{
+    color: $alert-text-color;
+  }
+
+  &-sweet{
+
+    &#{$alertclassname}-success{
+      background-color: transparentize($success, 0.95);
+      border-color: $success;
+
+      #{$alertclassname}-heading{
+        color: $success;
+      }
+    }
+
+    &#{$alertclassname}-warning{
+      background-color: transparentize($warning, 0.95);
+      border-color: $warning;
+
+      #{$alertclassname}-heading{
+        color: $warning;
+      }
+    }
+
+    &#{$alertclassname}-danger{
+      background-color: transparentize($danger, 0.95);
+      border-color: $danger;
+
+      #{$alertclassname}-heading{
+        color: $danger;
+      }
+    }
+
+    #{$alertclassname}-flex{
+      @include flexbox-display-flex();
+      @include flexbox-align-items(center);
+
+      #{$alertclassname}-icon{
+        @include flexbox-flex(0 0 auto);
+        width: auto;
+        max-width: 100%;
+        padding-right: $alert-padding-y;
+
+      }
+      #{$alertclassname}-desc{
+        @include flexbox-flex-basis(0);
+        @include flexbox-flex-grow(1);
+        max-width: 100%;
+      }
+    }
+
+    #{$alertclassname}-center{
+      padding: $alert-padding-y;
+
+      #{$alertclassname}-icon{
+        padding-bottom: $alert-padding-y;
+
+        .alert-icons{
+          margin: 0 auto;
+        }
+      }
+      #{$alertclassname}-desc{
+        text-align: center;
+      }
+    }
+
+
+    #{$alertclassname}-heading{text-transform: uppercase;}
+
+    #{$alertclassname}-desc{}
+  }
+}

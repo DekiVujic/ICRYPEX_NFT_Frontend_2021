@@ -1,0 +1,165 @@
+.animation-alert-icons{
+  background-color: transparent;
+  //width: 90px;
+  //height: 90px;
+  padding: 0;
+
+  .alert-icons{
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    position: relative;
+    box-sizing: content-box;
+    border: 2px solid transparent;
+    @include border-radius(50%);
+
+    &-success {
+      border-color: $success;
+
+      &-tip, &-long {
+        background-color: $success;
+        height: 2px;
+        position: absolute;
+        z-index: 2;
+        @include border-radius(2px);
+      }
+      &-tip {
+        width: 6px;
+        left: 6px;
+        top: 17px;
+        @include animation-multi(SuccessAnimateTip 0.75s);
+        @include rotate(45);
+      }
+      &-long {
+        width: 16px;
+        right: 4px;
+        top: 14px;
+        @include animation-multi(SuccessAnimateLong 0.75s);
+        @include rotate(-45);
+      }
+
+      @include keyframes(SuccessAnimateTip){
+        0%, 54%   {width: 0; left: 0px; top: 7px;}
+        70%       {width: 12px; left: -2px; top: 14px;}
+        84%       {width: 5px; left: 7px; top: 17px;}
+        100%      {width: 6px; left: 6px; top: 17px;}
+      }
+      @include keyframes(SuccessAnimateLong){
+        0%, 70%   {width: 0; right: 20px; top: 18px;}
+        84%       {width: 19px; right: 1px; top: 12px;}
+        100%      {width: 16px; right: 4px; top: 14px;}
+      }
+    }
+
+    &-warning {
+      background-color: transparentize($warning, 0.98);
+      border-color: $warning;
+      @include animation-multi(WarningScale 0.75s infinite alternate);
+
+      &:after, &:before {
+        background: transparent;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include border-radius(50%);
+      }
+      &:before {
+        display: inline-block;
+        opacity: 0;
+        @include animation-multi(WarningPulse 2s linear infinite);
+      }
+      &:after {
+        display: block;
+        z-index: 1;
+      }
+      &-body {
+        background-color: $warning;
+        width: 2px;
+        height: 12px;
+        margin-left: -1px;
+        position: absolute;
+        left: 50%;
+        top: 6px;
+        z-index: 2;
+        @include animation-multi(WarningPulseIns 0.75s infinite alternate);
+        @include border-radius(2px);
+      }
+      &-dot {
+        background-color: $warning;
+        width: 2px;
+        height: 2px;
+        margin-left: -1px;
+        position: absolute;
+        bottom: 6px;
+        left: 50%;
+        z-index: 2;
+        @include animation-multi(WarningPulseIns 0.75s infinite alternate);
+        @include border-radius(50%);
+      }
+
+      @include keyframes(WarningScale){
+        0%   {@include scale(1);}
+        30%  {@include scale(1.02);}
+        100% {@include scale(1);}
+      }
+      @include keyframes(WarningPulse){
+        0%   {background-color: transparentize($warning, 0.98); opacity: 0; @include scale(1);}
+        30%  {background-color: transparentize($warning, 0.90); opacity: 0.8; @include scale(1);}
+        100% {background-color: $warning; opacity: 0; @include scale(2);}
+      }
+      @include keyframes(WarningPulseIns){
+        0%   {background-color: $warning;}
+        100% {background-color: $warning;}
+      }
+    }
+
+    &-error {
+      border-color: $danger;
+      @include animation-multi(ErrorAnimateIcon .5s);
+
+      &-x {
+        display: block;
+        position: relative;
+        z-index: 2;
+
+        &-left, &-right {
+          background-color: $danger;
+          width: 16px;
+          height: 2px;
+          display: block;
+          position: absolute;
+          top: 13px;
+          z-index: 2;
+          @include border-radius(2px);
+        }
+        &-left {
+          left: 6px;
+          @include animation-multi(ErrorAnimateXLeft .75s);
+          @include rotate(45);
+        }
+        &-right {
+          right: 6px;
+          @include animation-multi(ErrorAnimateXRight .75s);
+          @include rotate(-45);
+        }
+      }
+
+      @include keyframes(ErrorAnimateIcon){
+        0%        {opacity: 0; @include rotateX(100);}
+        100%      {opacity: 1; @include rotateX(0);}
+      }
+      @include keyframes(ErrorAnimateXLeft){
+        0%, 65%   {width: 0; left: 34px; top: 40px;}
+        84%       {width: 16px; left: 7px; top: 14px;}
+        100%      {width: 16px; left: 6px; top: 13px;}
+      }
+      @include keyframes(ErrorAnimateXRight){
+        0%, 65%   {width: 0; right: 34px; top: 40px;}
+        84%       {width: 16px; right: 7px; top: 14px;}
+        100%      {width: 16px; right: 6px; top: 13px;}
+      }
+    }
+  }
+}

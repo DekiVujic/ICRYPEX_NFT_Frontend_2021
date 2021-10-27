@@ -1,0 +1,56 @@
+/* Site Main Path Settings */
+$cache-busting: #{"?v="} + unique_id();
+// $path-assets-url:                   "../../../assets";
+// $path-fonts-url:                    "#{$path-assets-url}/fonts";
+$path-assets-url: "../../../../assets";
+$path-fonts-url: "../../../../fonts/";
+$path-img-url: "../../../../img";
+$path-img-url-icons: "#{$path-img-url}/icons";
+/* Site Main Path Settings */
+
+/* Site General Color Settings */
+$site-clr-white: #ffffff;
+$site-clr-black: #000000;
+$site-clr-blue: #62abff;
+$site-clr-blue-dark: #2a3553;
+$site-clr-cyan: #26c8dd;
+$site-clr-green: #70a800;
+$site-clr-red: #b82c0d;
+$site-clr-orange: #e67948;
+$site-clr-yellow: #ff8c00;
+/* Site General Color Settings */
+
+/* Site Main Settings */
+$site-font-family-gilroy-regular: "gilroy-regular", sans-serif;
+$site-font-family-gilroy-semibold: "gilroy-semibold", sans-serif;
+$site-font-family-gilroy-bold: "gilroy-bold", sans-serif;
+$site-font-family-default: $site-font-family-gilroy-regular;
+$site-font-size-base: 1rem;
+$site-font-clr-pri: #454545;
+$site-font-clr-sec: #9099a0;
+/* Site Main Color Settings */
+
+/* Site Currency Color Settings */
+$site-clr-curr-try: #d50032;
+$site-clr-curr-usd: #4aa94e;
+$site-clr-curr-eur: #004777;
+$site-clr-curr-btc: #f7931a;
+$site-clr-curr-eth: #637fea;
+$site-clr-curr-ltc: #a5a8a9;
+$site-clr-curr-xrp: #23292f;
+$site-clr-curr-mpay: #e8094a;
+$site-clr-curr-bat: #f74e00;
+$site-clr-curr-xlm: #232323;
+$site-clr-curr-tryb: #002eac;
+$site-clr-curr-usdt: #2dd976;
+$site-clr-curr-link: #2a5ada;
+$site-clr-curr-avax: #e04040;
+$site-clr-curr-algo: #757575;
+$site-clr-curr-ftm: #1969ff;
+$site-clr-curr-dot: #262626;
+$site-clr-curr-hot: #b748ff;
+$site-clr-curr-mkr: #1aab9b;
+$site-clr-curr-aave: #b6509e;
+$site-clr-curr-aave1: $site-clr-curr-aave;
+$site-clr-curr-aave2: #2ebac6;
+/* Site Currency Color Settings */

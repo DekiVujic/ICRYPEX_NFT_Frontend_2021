@@ -67,7 +67,9 @@ gulp.task('script-custom', () => {
         folderSrcMain + 'script/vendors/**/bootstrap.js',
         folderSrcMain + 'script/vendors/**/swiper.js',
         folderSrcMain + 'script/vendors/**/dropzone.js',
+        folderSrcMain + 'script/vendors/**/inputmask.js',
         folderSrcMain + 'script/vendors/**/app.js',
+        folderSrcMain + 'script/custom/**/lead_form_validations.js',
         folderSrcMain + 'script/custom/**/bs_modal.js',
         folderSrcMain + 'script/custom/**/app.js'
     ])

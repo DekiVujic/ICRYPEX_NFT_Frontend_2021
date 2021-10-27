@@ -1,105 +1,464 @@
 
+
+.xtras{}
+
 body.comingsoon{
-  width: 100%;
-  height: 100%;
-  max-width: 100vw;
-  max-height: 100vh;
-  overflow: hidden;
-  position: relative;
-  //padding-top: 20px;
 
-  .header,
-  .main,
-  .footer{
-    @include filter-multiple(blur(4px));
-  }
-
-
-  *, &::before, &::after{
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  }
-
-}
-
-div.comingsoon{
-  width: 100%;
-  height: 100%;
-  max-width: 100vw;
-  max-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9996;
-  overflow: hidden;
-
-  &::before{
-    content: "";
-    background-color: transparentize($white, 0.50);
-    width: 100%;
-    height: 100%;
+  .header{
+    background-color: transparent;
     position: absolute;
-    z-index: 9997;
+    width: 100%;
+    z-index: $zindex-fixed;
     top: 0;
     left: 0;
-    overflow: hidden;
-    //@include backdrop-filter-multiple(blur(10px));
+
+    &-web{
+      padding: 20px 0;
+
+      @include BootstrapMaxWidthResponsive(xl){
+        padding: 15px 0;
+      }
+
+      .header-left{
+        @include BootstrapMaxWidthResponsive(lg){
+          @include flexbox-justify-content(center);
+          @include flexbox-flex(1 0 0%);
+          width: 100%;
+          @include scale(0.8);
+        }
+      }
+
+      .header-logo{
+        .headlogo-text-clr01{fill: $white;}
+      }
+
+      .header-nav{
+        display: none !important;
+      }
+
+      .header-lang{
+        display: none !important;
+      }
+
+    }
   }
 
-  &::after{
-    content: "";
-    background-color: transparentize($white, 0);
-    width: 15000px;
-    height: 15000px;
-    position: absolute;
-    z-index: 9998;
-    top: calc(50% - 5px);
-    left: 50%;
-    @include translateX(-50%);
-    @include border-radius(100%);
-    box-shadow: 0 0 350px 350px transparentize($yellow, 0.75);
-    overflow: hidden;
-    @include animation-multi(RainbowBgColor 4s steps(36) infinite);
-  }
+  .main-comingsoon{
+    background-color: #0D0D0D;
+    background-image: url(#{$path-img-url}/xtras/comingsoon_main_bg.jpg#{$cache-busting});
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    padding-top: 70px;
+    position: relative;
 
-  &-wrp{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include translate(-50%, -50%);
-    z-index: 9999;
+    @include BootstrapMaxWidthResponsive(xl){
+      padding-top: 50px;
+    }
 
-    &-logo{
-      padding: 15px 0;
-      position: relative;
+    .fullpageconfetti{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      @include translateX(-50%);
+      z-index: 1;
+      opacity: 0.5;
+      @include animation-multi(ConfettiBgOpacity 3s linear alternate infinite);
 
-      .headlogo{
-        @include scale(2);
+      @include keyframes(ConfettiBgOpacity){
+        0%   {opacity: 0;}
+        100% {opacity: 0.5;}
+      }
+
+      @include BootstrapMaxWidthResponsive(lg){
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        z-index: -1;
       }
 
     }
 
-    &-cont{
-      position: relative;
+    .comingsoonsec{
+      @include flexbox-display-flex();
+      @include flexbox-flex-flow(column);
+      width: 100%;
+      height: 100%;
 
-      h1{
-        color: $green;
-        font-size: 3rem;
-        position: relative;
-        top: -20px;
-        left: 67px;
-        //@include animation-multi(RainbowBgColor 4s steps(36) infinite);
+      &-head{
+        @include flexbox-display-flex();
+        @include flexbox-flex-flow(column);
+        @include flexbox-justify-content(center);
+        @include flexbox-flex(1);
+
+        &-img{
+          @include flexbox-display-flex();
+          @include flexbox-flex-direction(column);
+          @include flexbox-align-items(center);
+          @include flexbox-justify-content(center);
+          background-color: transparent;
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_bg.svg#{$cache-busting});
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: auto 400px;
+          width: 100%;
+          min-height: 400px;
+
+          @include BootstrapMaxWidthResponsive(hd){
+            background-size: auto 320px;
+            min-height: 320px;
+          }
+          @include BootstrapMaxWidthResponsive(xl){
+            background-size: auto 260px;
+            min-height: 260px;
+          }
+
+          .roundednftimg{
+            width: 240px;
+            height: 240px;
+            margin: 0 auto;
+            @include scale(1);
+            @include animation-multi(NFTImgScale 0.75s linear 0s forwards);
+
+            @include BootstrapMaxWidthResponsive(hd){
+              width: 200px;
+              height: 200px;
+            }
+            @include BootstrapMaxWidthResponsive(xl){
+              width: 170px;
+              height: 170px;
+            }
+
+            @include keyframes(NFTImgScale){
+              0%   {@include scale(0.1); opacity: 0;}
+              75%  {@include scale(1.2); opacity: 1;}
+              100% {@include scale(1); opacity: 1;}
+            }
+
+            > img{
+              display: block;
+              opacity: 1;
+              @include animation-multi(NFTImgInfiniteSpin 25s linear 0s infinite normal none running);
+
+              @include keyframes(NFTImgInfiniteSpin){
+                100% {@include rotate(360)}
+              }
+            }
+          }
+        }
+
+        &-slogan{
+          @include flexbox-flex(0);
+          text-align: center;
+
+          *{
+            color: $white;
+          }
+
+          h1{
+            font-family: $site-font-family-gilroy-bold;
+            @include font-size(3.5rem);
+
+            @include BootstrapMaxWidthResponsive(hd){
+              @include font-size(3rem);
+            }
+            @include BootstrapMaxWidthResponsive(xl){
+              @include font-size(2.5rem);
+            }
+          }
+
+          p{
+            font-family: $site-font-family-gilroy-regular;
+            @include font-size(1.125rem);
+
+            @include BootstrapMaxWidthResponsive(hd){
+              @include font-size(1rem);
+            }
+          }
+
+        }
+
       }
+
+      &-foot{
+        @include flexbox-flex(0);
+        padding: 40px 0;
+
+        @include BootstrapMaxWidthResponsive(hd){
+          padding: 20px 0;
+        }
+
+        .leadform{
+          position: relative;
+          z-index: 2;
+
+          @include BootstrapMaxWidthResponsive(lg){
+            background-color: transparentize(#182239, 0.2);
+            padding: 15px 20px 20px;
+            border: 1px solid lighten(#182239, 5%);
+            @include border-radius($border-radius-sm);
+          }
+
+          .alert{
+            @include BootstrapMaxWidthResponsive(lg){
+              margin-top: $alert-margin-bottom * 0.5;
+              margin-bottom: $alert-margin-bottom * 0.5;
+            }
+          }
+
+          .form-group{
+            margin-bottom: 0;
+          }
+
+          &-inputs{
+
+            &.labelani{
+
+              .form-floating{
+
+                > label{
+                  color: $white;
+                  font-family: $site-font-family-gilroy-regular;
+                  @include font-size(1.125rem);
+                  padding-left: 0;
+
+                  @include BootstrapMaxWidthResponsive(hd){
+                    @include font-size(1rem);
+                  }
+                }
+
+                > .form-control,
+                > .form-select{
+                  color: $white;
+                  background-color: transparent;
+                  border-top-color: transparent;
+                  border-left-color: transparent;
+                  border-right-color: transparent;
+                  border-bottom-width: 3px;
+                  border-bottom-color: $white;
+                  padding-left: 0;
+                  padding-right: 0;
+                  @include border-radius(0);
+
+                  @include BootstrapMaxWidthResponsive(lg){
+                    border-bottom-width: 2px;
+                  }
+                }
+
+                > .form-control:focus ~ label,
+                > .form-control:not(:placeholder-shown) ~ label,
+                > .form-select ~ label{
+                  color: $primary;
+                  padding-left: 0;
+                  opacity: 1;
+                  @include transform-multiple(scale(0.75) translateY(-0.75rem) translateX(0rem));
+                }
+
+                > .form-select{
+                  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC44MjgiIGhlaWdodD0iOC40MTQiIHZpZXdCb3g9IjAgMCAxNC44MjggOC40MTQiPg0KICA8cGF0aCBpZD0iaW5kaXIiIGQ9Ik0yLDVsNiw2LDYtNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuNTg2IC0zLjU4NikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz4NCjwvc3ZnPg0K");
+                  background-position: right 1rem bottom 15px;
+                  padding-top: 1.125rem;
+                  padding-bottom: 0.5rem;
+
+                  @include BootstrapMaxWidthResponsive(hd){
+                    padding-top: 0.875rem;
+                  }
+
+                  option{
+                    color: $white;
+                    background-color: $black;
+                  }
+
+                  & ~ label{
+                    display: none;
+                  }
+                }
+
+                > .inputbottombar{
+                  position: relative;
+                  display: block;
+                  z-index: 3;
+
+                  &::before,
+                  &::after {
+                    content: "";
+                    height: 3px;
+                    width: 0;
+                    bottom: 0;
+                    position: absolute;
+                    @include transition-multiple(all 0.3s ease-in-out);
+
+                    @include BootstrapMaxWidthResponsive(lg){
+                      height: 2px;
+                    }
+                  }
+                  &::before{left:50%;}
+                  &::after{right:50%;}
+                }
+
+                > .msginput{
+                  display: none;
+                  color: $danger;
+                  font-family: $site-font-family-gilroy-regular;
+                  @include font-size(0.875rem);
+                  padding: $form-floating-padding-y $form-floating-padding-x;
+                  padding-right: 0;
+                  height: 100%;
+                  position: absolute;
+                  top: 8px;
+                  right: 0;
+                  pointer-events: none;
+                  transform-origin: 0 0;
+                  @include transition-multiple($form-floating-transition);
+
+                  @include BootstrapMaxWidthResponsive(hd){
+                    top: 6px;
+                  }
+                }
+
+                > .form-control:focus ~ .msginput,
+                > .form-control:not(:placeholder-shown) ~ .msginput,
+                > .form-select ~ .msginput{
+                  color: $danger;
+                  padding-left: 0;
+                }
+
+                > .form-control:valid ~ .msginput{
+                  display: none !important;
+                }
+                > .form-control:valid ~ label{
+                  color: $success;
+                }
+
+                > .form-control{
+                  &:focus ~ .inputbottombar:before,
+                  &:focus ~ .inputbottombar:after{
+                    width:50%;
+                  }
+
+                  &:focus ~ .inputbottombar:before,
+                  &:focus ~ .inputbottombar:after{
+                    background-color: $primary;
+                  }
+
+                  &:valid ~ .inputbottombar:before,
+                  &:valid ~ .inputbottombar:after{
+                    background-color: $success;
+                  }
+                }
+              }
+            }
+
+            .phonearea .form-select{
+              width: 80px;
+              padding-right: 30px;
+            }
+
+            .error{
+              .msginput{
+                display: block !important;
+              }
+            }
+          }
+
+          &-checkboxs{
+            @include flexbox-display-flex();
+            @include flexbox-flex-wrap(wrap);
+            @include flexbox-justify-content(center);
+            @include flexbox-flex-basis(0);
+            @include flexbox-flex-grow(1);
+            margin-left: -$grid-gutter-width * 0.5;
+            margin-right: -$grid-gutter-width * 0.5;
+            max-width: 100%;
+            width:100%;
+            padding-top: 20px;
+
+            @include BootstrapMaxWidthResponsive(lg){
+              @include flexbox-flex-direction(column);
+            }
+
+            &-items{
+              @include flexbox-flex(0 0 auto);
+              width: auto;
+              max-width: 100%;
+              position:relative;
+              padding-top: 10px;
+              padding-left: $grid-gutter-width * 0.5;
+              padding-right: $grid-gutter-width * 0.5;
+
+              @include BootstrapMaxWidthResponsive(hd){
+                padding-top: 0;
+              }
+
+              label{
+                //color: $white;
+
+                @include BootstrapMaxWidthResponsive(hd){
+                  @include font-size(0.875rem);
+                }
+              }
+            }
+
+          }
+
+          &-buttons{
+            @include flexbox-display-flex();
+            @include flexbox-flex-wrap(wrap);
+            @include flexbox-justify-content(center);
+            @include flexbox-flex-basis(0);
+            @include flexbox-flex-grow(1);
+            max-width: 100%;
+            width:100%;
+            padding-top: 25px;
+            position:relative;
+
+            @include BootstrapMaxWidthResponsive(hd){
+              padding-top: 0;
+            }
+            @include BootstrapMaxWidthResponsive(lg){
+              width: 100%;
+            }
+
+            .submitbtn{
+              color: $white;
+              min-width: 270px;
+              text-transform: uppercase;
+              @include font-size(1.25rem);
+
+              @include BootstrapMaxWidthResponsive(1k){
+                min-width: 238px;
+              }
+              @include BootstrapMaxWidthResponsive(hd){
+                min-width: 214px;
+              }
+              @include BootstrapMaxWidthResponsive(xl){
+                min-width: 170px;
+              }
+              @include BootstrapMaxWidthResponsive(lg){
+                min-width: 100%;
+              }
+
+              &.btn-success{
+                border-color: lighten($site-clr-green, 5%);
+              }
+            }
+          }
+
+          .was-validated{
+            .msginput{display: none !important;}
+          }
+
+          .alertset{
+            max-width: 800px;
+            margin: 0 auto;
+          }
+        }
+      }
+
     }
+
   }
 
-  @include keyframes(RainbowBgColor){
-    from {@include filter-multiple(hue-rotate(10deg));}
-    to {@include filter-multiple(hue-rotate(360deg));}
-  }
 }

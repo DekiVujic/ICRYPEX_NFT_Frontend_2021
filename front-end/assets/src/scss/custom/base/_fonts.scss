@@ -53,11 +53,11 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("#{$path-fonts-url}/gilroy/gilroy-bold.eot"); // IE9 Compat Modes
-  src: url("#{$path-fonts-url}/gilroy/gilroy-bold.eot?#iefix") format("embedded-opentype"), // IE6-IE8
-  url("#{$path-fonts-url}/gilroy/gilroy-bold.otf") format("opentype"), // Open Type Font
-  url("#{$path-fonts-url}/gilroy/gilroy-bold.svg#gilroy-bold") format("svg"), // Legacy iOS
-  url("#{$path-fonts-url}/gilroy/gilroy-bold.ttf") format("truetype"), // Safari, Android, iOS
-  url("#{$path-fonts-url}/gilroy/gilroy-bold.woff") format("woff"), // Modern Browsers
-  url("#{$path-fonts-url}/gilroy/gilroy-bold.woff2") format("woff2"); // Super Modern Browsers
+  src: url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.eot"); // IE9 Compat Modes
+  src: url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.eot?#iefix") format("embedded-opentype"), // IE6-IE8
+  url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.otf") format("opentype"), // Open Type Font
+  url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.svg#gilroy-extra-bold") format("svg"), // Legacy iOS
+  url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.ttf") format("truetype"), // Safari, Android, iOS
+  url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.woff") format("woff"), // Modern Browsers
+  url("#{$path-fonts-url}/gilroy/gilroy-extra-bold.woff2") format("woff2"); // Super Modern Browsers
 }
