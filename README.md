@@ -2,6 +2,7 @@
 
 #### Web Public Area Frontend List
 - [Coming_Soon_Lead_Form](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Coming_Soon_Lead_Form.html)
+- [Coming_Soon_Lead_Form_CountryPhone](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Coming_Soon_Lead_Form_CountryPhone.html)
 - [Coming_Soon_Lead_Confirm](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Coming_Soon_Lead_Confirm.html)
 - [Home_Page](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Home_Page.html)
 - [Sign_Up](https://orcunkilicaslan.github.io/ICRYPEX_NFT_Frontend_2021/front-end/html/Sign_Up.html)

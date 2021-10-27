@@ -97,7 +97,7 @@ body.comingsoon{
         }
 
         .comingsoonsec-head-img{
-          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_form_bg.png#{$cache-busting});
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_form_bg.svg#{$cache-busting});
         }
       }
 
@@ -105,7 +105,7 @@ body.comingsoon{
         background-color: transparent;
 
         .comingsoonsec-head-img{
-          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_confirm_bg.png#{$cache-busting});
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_confirm_bg.svg#{$cache-busting});
         }
       }
 
@@ -121,7 +121,7 @@ body.comingsoon{
           @include flexbox-align-items(center);
           @include flexbox-justify-content(center);
           background-color: transparent;
-          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_form_bg.png#{$cache-busting});
+          background-image: url(#{$path-img-url}/xtras/comingsoon_main_headimg_form_bg.svg#{$cache-busting});
           background-repeat: no-repeat;
           background-position: center center;
           background-size: auto 400px;

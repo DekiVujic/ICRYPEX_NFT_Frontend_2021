@@ -1,7 +1,15 @@
 
 import Inputmask from "inputmask";
 
-if(document.querySelector('.leadform')){
+new Inputmask({
+    "mask": "0999 999 99 99",
+    "greedy": false,
+    "placeholder": "",
+    "showMaskOnFocus": true,
+    "showMaskOnHover": false
+}).mask(document.querySelectorAll('.phoneonlytrmask'));
+
+if(document.querySelector('.leadformcountryphone')){
 
     let phoneInputElem = document.querySelectorAll('.phonecountryselectmask')[0];
 
