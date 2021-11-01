@@ -13,20 +13,31 @@ body.comingsoon{
     left: 0;
 
     &-web{
+      @include flexbox-justify-content(space-between);
       padding: 20px 0;
 
       @include BootstrapMaxWidthResponsive(xl){
         padding: 15px 0;
+        position: relative;
       }
 
       .header-left{
+
+        .header-logo{
+          @include BootstrapMaxWidthResponsive(lg){
+            width: 170px;
+          }
+        }
+
+      }
+
+      .header-left,
+      .header-right{
         @include BootstrapMaxWidthResponsive(lg){
-          @include flexbox-justify-content(center);
-          @include flexbox-flex(1 0 0%);
-          width: 100%;
-          @include scale(0.8);
+          width: auto;
         }
       }
+
 
       .header-logo{
         .headlogo-text-clr01{fill: $white;}
@@ -37,7 +48,64 @@ body.comingsoon{
       }
 
       .header-lang{
-        display: none !important;
+        //display: none !important;
+
+        .navbar{
+          padding: 0;
+
+          .navbar-nav{
+            @include flexbox-flex-direction(row);
+          }
+
+          .nav-link{
+            color: $white;
+            font-family: $site-font-family-gilroy-regular;
+            @include rfs(0.875rem);
+            padding: 0 $navbar-nav-link-padding-x * 0.5;
+          }
+        }
+
+        .dropdown{
+
+          @include BootstrapMinWidthResponsive(xm){
+            .btn[data-bs-toggle="dropdown"]{
+              display: none;
+            }
+
+            div.dropdown-menu{
+              all: unset;
+            }
+          }
+          @include BootstrapMaxWidthResponsive(xm){
+
+            .btn[data-bs-toggle="dropdown"]{
+              font-family: $site-font-family-gilroy-regular;
+              padding: 0.1rem 0.5rem 0.025rem;
+              @include border-radius(0.375rem);
+            }
+
+            div.dropdown-menu{
+              background-color: #182239;
+              border: 1px solid lighten(#182239, 5%);
+              min-width: 50px;
+              text-align: right;
+              padding: 5px 0;
+              @include border-radius(0.375rem);
+
+              .navbar{
+                display: block;
+              }
+
+              .navbar-nav{
+                @include flexbox-flex-direction(column);
+
+                .nav-item{
+                  padding: 5px;
+                }
+              }
+            }
+          }
+        }
       }
 
     }
